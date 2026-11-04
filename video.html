@@ -7,17 +7,13 @@
   <meta name="keywords" content="Vídeo Mitologia Grega, OLYMPUS, Amanda e Bianca, HTML5 Video, Deuses Gregos, Web Design">
   <title>OLYMPUS — Vídeo do Projeto | Por Amanda e Bianca</title>
   
-  <!-- CSS Externo Master -->
   <link rel="stylesheet" href="css/style.css">
-  
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/><polygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/></svg>">
 </head>
 <body>
 
-  <!-- Padrão Decorativo Helênico Superior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
-  <!-- Cabeçalho e Navegação Principal -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" aria-label="OLYMPUS Mitologia Grega - Página Inicial">
@@ -27,7 +23,6 @@
         <span>OLYMPUS</span>
       </a>
 
-      <!-- Menu Principal entre todas as 4 páginas -->
       <nav class="main-nav" aria-label="Navegação Principal do Portal">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Início</a></li>
@@ -47,7 +42,7 @@
 
   <main id="main-content">
     
-    <!-- Seção Principal de Exibição do Vídeo (Destaque Total ao Player) -->
+    <!-- ESPAÇO EXCLUSIVO E CENTRAL DO VÍDEO -->
     <section class="section video-hero-section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
       <div class="container">
         
@@ -60,28 +55,19 @@
           </p>
         </header>
 
-        <!-- ESPAÇO DEDICADO EXCLUSIVAMENTE AO VÍDEO -->
         <div class="cinema-wrapper" style="max-width: 1040px; margin: 0 auto 3.5rem;">
           
           <div class="cinema-screen-frame">
-            <!-- Tag semântica nativa HTML5 <video> com controles completos e pôster -->
             <video id="projectVideo" class="cinema-video-element" controls preload="metadata" poster="assets/images/video-poster.jpg">
-              <!-- Fonte primária do vídeo oficial das alunas Amanda e Bianca -->
               <source src="assets/video/apresentacao-grupo.mp4" type="video/mp4">
-              <!-- Fonte de contingência imediata para testes -->
               <source src="assets/video/apresentacao-exemplo.mp4" type="video/mp4">
-              
-              <!-- Legendas acessíveis -->
               <track label="Português" kind="subtitles" srclang="pt" default>
-              
-              <!-- Mensagem de fallback -->
               <p style="color: #fff; padding: 2rem; text-align: center;">
                 Seu navegador não suporta a tag de vídeo HTML5. Por favor, atualize seu navegador para assistir.
               </p>
             </video>
           </div>
 
-          <!-- Barra de Controles e Status do Player -->
           <div class="cinema-controls-bar">
             <div class="video-status-indicator">
               <span class="status-dot"></span>
@@ -91,7 +77,6 @@
             <div class="cinema-quick-buttons">
               <button id="btnFullscreen" class="cinema-btn-tool" title="Expandir vídeo em tela cheia">Tela Cheia</button>
               
-              <!-- Seletor Rápido para Troca de Vídeo se Necessário -->
               <label for="localVideoInput" class="cinema-btn-tool" style="cursor: pointer; background: rgba(212, 175, 55, 0.2); border-color: var(--gold-pure);">
                 <span>📁 Trocar Arquivo de Vídeo</span>
                 <input type="file" id="localVideoInput" accept="video/mp4,video/webm" style="display: none;">
@@ -143,7 +128,7 @@
       </div>
     </section>
 
-    <!-- FONTES CONFIÁVEIS & REFERÊNCIAS BIBLIOGRÁFICAS (CRITÉRIO A - CORRETUDE) -->
+    <!-- REFERÊNCIAS BIBLIOGRÁFICAS EM PADRÃO ABNT -->
     <section class="section" id="criterios" aria-labelledby="referencias-heading">
       <div class="container">
         
@@ -212,10 +197,8 @@
 
   </main>
 
-  <!-- Padrão Decorativo Helênico Inferior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
-  <!-- Rodapé Institucional com Crédito a Amanda e Bianca -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -266,7 +249,6 @@
     </div>
   </footer>
 
-  <!-- Script JavaScript Master -->
   <script src="js/main.js"></script>
 </body>
 </html>
