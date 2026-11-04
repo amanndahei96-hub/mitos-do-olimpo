@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLYMPUS — Vídeo do Projeto</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 8.7L4.5 7.5 12 4l7.5 3.5L12 10.7zM2 17l10 5 10-5v-2l-10 5-10-5v2zm0-4l10 5 10-5v-2l-10 5-10-5v2z"/></svg><span>OLYMPUS</span></a>
+      <nav class="main-nav" aria-label="Navegação Principal do Portal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="deuses.html" class="nav-link">Deuses & Mapa</a></li>
+          <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
+          <li><a href="video.html" class="nav-link active">Vídeo</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section video-hero-section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Produção Multimídia • Amanda e Bianca</span>
+          <h1 class="section-title">Vídeo do Projeto OLYMPUS</h1>
+          <p class="section-desc">Espaço cinematográfico dedicado à exibição do vídeo sobre mitologia grega, produzido e editado por Amanda e Bianca com reprodutor nativo HTML5.</p>
+        </header>
+
+        <div class="cinema-wrapper" style="max-width: 1040px; margin: 0 auto 3.5rem;">
+          <div class="cinema-screen-frame">
+            <video id="projectVideo" class="cinema-video-element" controls preload="metadata" poster="https://images.unsplash.com/photo-1502781252888-9143ba7f074e?auto=format&fit=crop&w=1200&q=80">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              <track label="Português" kind="subtitles" srclang="pt" default />
+              <p style="color: #fff; padding: 2rem; text-align: center;">Seu navegador não suporta a tag de vídeo HTML5.</p>
+            </video>
+          </div>
+
+          <div class="cinema-controls-bar">
+            <div class="video-status-indicator">
+              <span class="status-dot"></span>
+              <span id="videoStatusText">Vídeo de Amanda & Bianca • Pronto para Reprodução</span>
+            </div>
+
+            <div class="cinema-quick-buttons">
+              <button id="btnFullscreen" class="cinema-btn-tool" title="Expandir vídeo em tela cheia">Tela Cheia</button>
+              <label for="localVideoInput" class="cinema-btn-tool" style="cursor: pointer; background: rgba(212, 175, 55, 0.2); border-color: var(--gold-pure);">
+                <span>📁 Trocar Arquivo de Vídeo</span>
+                <input type="file" id="localVideoInput" accept="video/mp4,video/webm" style="display: none;" />
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="autoras-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Ficha Técnica do Trabalho</span>
+          <h2 id="autoras-heading" class="section-title">Desenvolvido por Amanda e Bianca</h2>
+          <p class="section-desc">Projeto interdisciplinar unindo desenvolvimento web responsivo, pesquisa historiográfica clássica e produção audiovisual.</p>
+        </header>
+
+        <div class="team-grid" style="max-width: 860px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">🏛️</div>
+            <h3 class="team-name">Amanda</h3>
+            <span class="team-role">Desenvolvimento Web & Pesquisa Histórica</span>
+            <p class="team-task">Arquitetura de informação, HTML semântico, CSS externo, interatividade do mapa e rigor filológico das fontes clássicas.</p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">🎬</div>
+            <h3 class="team-name">Bianca</h3>
+            <span class="team-role">Produção Multimídia & Audiovisual</span>
+            <p class="team-task">Roteiro, gravação, edição e identidade visual para um vídeo que dialoga com o conteúdo do portal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="criterios" aria-labelledby="referencias-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Fundamentação Acadêmica</span>
+          <h2 id="referencias-heading" class="section-title">Referências Bibliográficas</h2>
+          <p class="section-desc">Obras teóricas consagradas e fontes primárias adotadas para a construção de todo o conteúdo mitológico do portal.</p>
+        </header>
+
+        <ul class="bibliography-list">
+          <li class="bib-item"><span class="bib-tag">Fonte Primária</span><p><strong>HESÍODO.</strong> <em>Teogonia</em>. Base para a origem dos deuses e a cosmogonia.</p></li>
+          <li class="bib-item"><span class="bib-tag">Fonte Primária</span><p><strong>HOMERO.</strong> <em>Ilíada & Odisseia</em>. Base para o mundo épico dos deuses e heróis.</p></li>
+          <li class="bib-item"><span class="bib-tag">Tratado Historiográfico</span><p><strong>BRANDÃO, Junito de Souza.</strong> <em>Mitologia Grega</em>. Referência essencial em português.</p></li>
+          <li class="bib-item"><span class="bib-tag">Dicionário de Referência</span><p><strong>GRIMAL, Pierre.</strong> <em>Dicionário da Mitologia Grega e Romana</em>. Consulta canônica para genes e atributos.</p></li>
+          <li class="bib-item"><span class="bib-tag">Antropologia</span><p><strong>VERNANT, Jean-Pierre.</strong> <em>O Universo, os Deuses, os Homens</em>. Análise da percepção religiosa e social dos mitos.</p></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><h4>OLYMPUS</h4><p>Portal acadêmico e interativo dedicado ao estudo e valorização da mitologia grega clássica.</p><div class="footer-quote">“A beleza é o esplendor da verdade.” — Platão</div></div>
+        <div class="footer-col"><h5>Navegação</h5><ul class="footer-links"><li><a href="index.html">Início</a></li><li><a href="deuses.html">Deuses & Mapa</a></li><li><a href="mitos.html">Mitos & Tempo</a></li><li><a href="video.html">Vídeo do Projeto</a></li></ul></div>
+        <div class="footer-col"><h5>Autoras</h5><ul class="footer-links"><li><a href="video.html#autoras-heading">Amanda — Front-End</a></li><li><a href="video.html#autoras-heading">Bianca — Audiovisual</a></li></ul></div>
+        <div class="footer-col"><h5>Multimídia</h5><p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem;">Player HTML5 integrado com suporte nativo a MP4 e vídeos locais.</p><span class="badge">Projeto Amanda & Bianca</span></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Projeto OLYMPUS — Desenvolvido por Amanda e Bianca.</p><p>Trabalho integrado de Web Design e Multimídia.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OLYMPUS — portal interativo de mitologia grega clássica com deuses, mitos, linha do tempo e vídeo." />
+  <title>OLYMPUS — Mitologia Grega</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/><polygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/></svg>">
+</head>
+<body>
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="OLYMPUS Mitologia Grega - Página Inicial">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.7L4.5 7.5 12 4l7.5 3.5L12 10.7zM2 17l10 5 10-5v-2l-10 5-10-5v2zm0-4l10 5 10-5v-2l-10 5-10-5v2z"/>
+        </svg>
+        <span>OLYMPUS</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação Principal do Portal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Início</a></li>
+          <li><a href="deuses.html" class="nav-link">Deuses & Mapa</a></li>
+          <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
+          <li><a href="video.html" class="nav-link">Vídeo</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-overlay"></div>
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
+      <div class="hero-content">
+        <span class="hero-sub-top">Portal Helênico</span>
+        <h1 class="hero-title">OLYMPUS</h1>
+        <p class="hero-tagline">Cosmogonia, panteão, heróis e histórias que moldaram a alma da Grécia antiga — com rigor histórico, narrativa emocional e design clássico.</p>
+        <div class="hero-actions">
+          <a href="deuses.html" class="btn btn-primary">Explorar o Panteão</a>
+          <a href="mitos.html" class="btn btn-outline">Ler a Linha do Tempo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="intro-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Introdução ao Mundo Grego</span>
+          <h2 id="intro-heading" class="section-title">A origem do mito e do universo</h2>
+          <p class="section-desc">A mitologia grega não é apenas um conjunto de histórias, mas uma forma de explicar a ordem do cosmos, a relação entre deuses, mortais e natureza.</p>
+        </header>
+
+        <div class="artifact-grid">
+          <article class="curiosity-card" style="border-top: 3px solid var(--gold-pure);">
+            <span class="curiosity-tag">COSMO</span>
+            <h3>Do Caos ao Cosmos</h3>
+            <p>No princípio, o vazio e o abismo: o Khaos. A partir dele surgem a Terra, o Céu e as divindades que organizam o mundo e o ritual da existência.</p>
+          </article>
+
+          <article class="curiosity-card" style="border-top: 3px solid var(--sky-blue);">
+            <span class="curiosity-tag">PANTEÃO</span>
+            <h3>Deuses do Olimpo</h3>
+            <p>Doze grandes divindades, cada uma com domínio específico: Zeus no céu, Atena na sabedoria, Poseidon no mar, Ares em guerra e muito mais.</p>
+          </article>
+
+          <article class="curiosity-card" style="border-top: 3px solid var(--bronze);">
+            <span class="curiosity-tag">HERÓIS</span>
+            <h3>Mitologia e memória</h3>
+            <p>Heróis como Héracles, Perseu, Teseu e Odisseu expressam a tensão entre mortalidade, coragem, destino e fama.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="triple-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Tríade central</span>
+          <h2 id="triple-heading" class="section-title">A tradição grega em três eixos</h2>
+        </header>
+
+        <div class="artifact-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          <article class="curiosity-card">
+            <span class="curiosity-tag">1</span>
+            <h3>Cosmogonia</h3>
+            <p>O nascimento do universo e das gerações divinas. Nix, Gaia, Urano, Cronos, Zeus e a sucessão de mundos.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="curiosity-tag">2</span>
+            <h3>Panteão</h3>
+            <p>Deuses do Olimpo, categorias dos divinos, relações familiares, epítetos e poderes individuais.</p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="curiosity-tag">3</span>
+            <h3>Herói e tragédia</h3>
+            <p>Os mitos humanos, os destinos inevitáveis e a resistência diante do poder dos deuses.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sources-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Fontes e base</span>
+          <h2 id="sources-heading" class="section-title">Referência clássica</h2>
+          <p class="section-desc">Os conteúdos do portal usam como base principal a tradição hesiódica e homérica, com atenção às variantes míticas e às interpretações posteriores.</p>
+        </header>
+
+        <div class="presentation-guide-box">
+          <h3 class="step-title" style="margin-bottom: 1rem;">Estrutura de estudo</h3>
+          <ul class="guide-step-list">
+            <li class="guide-step-item">
+              <span class="step-time">1</span>
+              <h4 class="step-title">Cosmogonia</h4>
+              <p class="step-desc">Caos, Gaia, Urano, Titãs, Zeus e a estrutura do universo helênico.</p>
+            </li>
+            <li class="guide-step-item">
+              <span class="step-time">2</span>
+              <h4 class="step-title">Panteão</h4>
+              <p class="step-desc">Os doze principais deuses e os domínios que definem a ordem divina.</p>
+            </li>
+            <li class="guide-step-item">
+              <span class="step-time">3</span>
+              <h4 class="step-title">Mitos e heróis</h4>
+              <p class="step-desc">A história dos mortais, das guerras, dos amores e dos destinos marcados.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>OLYMPUS</h4>
+          <p>Portal acadêmico e interativo dedicado ao estudo e valorização da mitologia grega clássica, com foco em estética, rigor histórico e experiência de navegação.</p>
+          <div class="footer-quote">“Canta-me, ó Musa...” — Homero</div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navegação</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="deuses.html">Os 12 Deuses & Mapa</a></li>
+            <li><a href="mitos.html">Mitos & Linha do Tempo</a></li>
+            <li><a href="video.html">Vídeo do Projeto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Projeto</h5>
+          <ul class="footer-links">
+            <li><a href="video.html#autoras-heading">Amanda — Web Design</a></li>
+            <li><a href="video.html#autoras-heading">Bianca — Audiovisual</a></li>
+            <li><a href="video.html#criterios">Referências Bibliográficas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Base</h5>
+          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">Conteúdo fundado em Homero, Hesíodo e autores clássicos sobre a mitologia grega.</p>
+          <span class="badge">Mitologia Fundamentada</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega Clássica.</p>
+        <p>Desenvolvido com fidelidade historiográfica e rigor técnico.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

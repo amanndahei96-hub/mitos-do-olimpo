@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLYMPUS — Deuses & Mapa</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 8.7L4.5 7.5 12 4l7.5 3.5L12 10.7zM2 17l10 5 10-5v-2l-10 5-10-5v2zm0-4l10 5 10-5v-2l-10 5-10-5v2z"/></svg><span>OLYMPUS</span></a>
+      <nav class="main-nav" aria-label="Navegação Principal do Portal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="deuses.html" class="nav-link active">Deuses & Mapa</a></li>
+          <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
+          <li><a href="video.html" class="nav-link">Vídeo</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section" style="padding-top: 3.5rem; padding-bottom: 2rem;">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Panteão Grego</span>
+          <h1 class="section-title">Os 12 Deuses Olímpicos</h1>
+          <p class="section-desc">Uma visão do mundo divino helênico, com hierarquia, domínios, genealogia e simbolismos fundamentais.</p>
+        </header>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="mapa-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Cartografia Celeste</span>
+          <h2 id="mapa-heading" class="section-title">Mapa do Olimpo</h2>
+        </header>
+
+        <div class="olympus-map-wrapper">
+          <div class="map-layout-grid">
+            <div class="map-visual-container">
+              <svg class="mountain-svg" viewBox="0 0 700 500" aria-label="Mapa do Monte Olimpo">
+                <defs>
+                  <linearGradient id="mountainGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#1a2c52"/>
+                    <stop offset="100%" stop-color="#0a1120"/>
+                  </linearGradient>
+                </defs>
+                <path d="M80 390 L250 160 L370 80 L520 180 L620 390 Z" fill="url(#mountainGradient)" opacity="0.9"/>
+                <path d="M170 390 L280 220 L350 160 L430 220 L530 390 Z" fill="rgba(212,175,55,0.08)" stroke="rgba(212,175,55,0.2)"/>
+                <path d="M190 250 L262 202 L330 220 L390 185 L470 250" fill="none" stroke="rgba(255,255,255,0.17)" stroke-width="2"/>
+
+                <g class="map-node active" data-name="Zeus" data-greek="Ζεύς" data-domain="Céu e trovão" data-bio="Rei dos deuses, senhor do Olimpo, associado ao raio e ao destino." data-attributes="Força, justiça, domínio celeste, lei divina" style="transform-origin:center;">
+                  <circle class="pin-outer" cx="392" cy="170" r="16"></circle>
+                  <circle class="pin-core" cx="392" cy="170" r="6"></circle>
+                  <text x="392" y="145" text-anchor="middle">Zeus</text>
+                </g>
+
+                <g class="map-node" data-name="Atena" data-greek="Ἀθηνᾶ" data-domain="Sabedoria e estratégia" data-bio="Filha de Zeus, protetora da razão, da justiça e da guerra prudente." data-attributes="Inteligência, técnica, estratégia, coragem moral">
+                  <circle class="pin-outer" cx="317" cy="228" r="14"></circle>
+                  <circle class="pin-core" cx="317" cy="228" r="6"></circle>
+                  <text x="317" y="202" text-anchor="middle">Atena</text>
+                </g>
+
+                <g class="map-node" data-name="Apolo" data-greek="Ἀπόλλων" data-domain="Luz, música e profecia" data-bio="Filho de Zeus e Leto, deus da música, da poesia e da harmonia solar." data-attributes="Luz, ordem, arte, razão clarividente">
+                  <circle class="pin-outer" cx="488" cy="190" r="14"></circle>
+                  <circle class="pin-core" cx="488" cy="190" r="6"></circle>
+                  <text x="488" y="165" text-anchor="middle">Apolo</text>
+                </g>
+
+                <g class="map-node" data-name="Ártemis" data-greek="Ἄρτεμις" data-domain="Caça e lua" data-bio="Deusa da caça, da virgindade e da lua, ligada ao mundo selvagem e intocado." data-attributes="Natureza, precisão, purificação, companhia das feras">
+                  <circle class="pin-outer" cx="552" cy="258" r="14"></circle>
+                  <circle class="pin-core" cx="552" cy="258" r="6"></circle>
+                  <text x="552" y="233" text-anchor="middle">Ártemis</text>
+                </g>
+
+                <g class="map-node" data-name="Poseidon" data-greek="Ποσειδῶν" data-domain="Mar e terremotos" data-bio="Irmão de Zeus, senhor dos mares, das tempestades e dos abismos oceânicos." data-attributes="Mar, cavalo, ondas, poder subterrâneo">
+                  <circle class="pin-outer" cx="260" cy="290" r="14"></circle>
+                  <circle class="pin-core" cx="260" cy="290" r="6"></circle>
+                  <text x="260" y="265" text-anchor="middle">Poseidon</text>
+                </g>
+
+                <g class="map-node" data-name="Ares" data-greek="Ἄρης" data-domain="Guerra e violência" data-bio="Deus da guerra, da força brutal e do ardor da batalha sem cálculo." data-attributes="Fúria, coragem, destruição, impulso belicoso">
+                  <circle class="pin-outer" cx="630" cy="290" r="14"></circle>
+                  <circle class="pin-core" cx="630" cy="290" r="6"></circle>
+                  <text x="630" y="264" text-anchor="middle">Ares</text>
+                </g>
+
+                <g class="map-node" data-name="Afrodite" data-greek="Ἀφροδίτη" data-domain="Amor e beleza" data-bio="Deusa do amor, da beleza e do desejo, nascida da espuma do mar." data-attributes="Atratividade, desejo, união, erotismo celestial">
+                  <circle class="pin-outer" cx="420" cy="308" r="14"></circle>
+                  <circle class="pin-core" cx="420" cy="308" r="6"></circle>
+                  <text x="420" y="282" text-anchor="middle">Afrodite</text>
+                </g>
+
+                <g class="map-node" data-name="Hermes" data-greek="Ἑρμῆς" data-domain="Mensageiros e comércio" data-bio="Mensageiro dos deuses, patrono dos viajantes, do comércio e da astúcia." data-attributes="Velocidade, troca, elo, perspicácia">
+                  <circle class="pin-outer" cx="185" cy="220" r="14"></circle>
+                  <circle class="pin-core" cx="185" cy="220" r="6"></circle>
+                  <text x="185" y="195" text-anchor="middle">Hermes</text>
+                </g>
+
+                <g class="map-node" data-name="Hades" data-greek="Ἅιδης" data-domain="Mundo inferior" data-bio="Deus do submundo, senhor dos mortos e guardião das sombras profundas." data-attributes="Morte, riqueza subterrânea, continuidade, silêncio">
+                  <circle class="pin-outer" cx="220" cy="350" r="14"></circle>
+                  <circle class="pin-core" cx="220" cy="350" r="6"></circle>
+                  <text x="220" y="325" text-anchor="middle">Hades</text>
+                </g>
+              </svg>
+            </div>
+
+            <aside class="map-inspector">
+              <div>
+                <div class="map-inspector-header">
+                  <div class="inspector-greek-name">Ζεύς</div>
+                  <h3 class="inspector-name">Zeus</h3>
+                </div>
+                <div class="inspector-domain">Céu e trovão</div>
+                <p class="inspector-bio">Rei dos deuses, senhor do Olimpo, associado ao raio e ao destino. Sua autoridade organiza a ordem divina e a justiça no mundo.</p>
+                <ul class="inspector-attributes">
+                  <li>Força transcendental</li>
+                  <li>Justiça e soberania</li>
+                  <li>Domínio do céu e do raio</li>
+                </ul>
+              </div>
+              <button class="btn btn-primary" style="width: 100%;">Ver mais detalhes</button>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cards-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Cartões interativos</span>
+          <h2 id="cards-heading" class="section-title">3D Flip dos deuses</h2>
+          <p class="section-desc">Clique nos cartões para revelar genealogia, epítetos e atribuições mitológicas.</p>
+        </header>
+
+        <div class="gods-filter-bar">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="ceu">Céu</button>
+          <button class="filter-btn" data-filter="mar">Mar</button>
+          <button class="filter-btn" data-filter="sabedoria">Sabedoria</button>
+          <button class="filter-btn" data-filter="natureza">Natureza</button>
+        </div>
+
+        <div class="gods-card-grid">
+          <div class="god-flip-card" data-category="ceu">
+            <div class="god-flip-inner">
+              <article class="god-card-face god-card-front">
+                <div class="god-card-icon-header">
+                  <span class="god-pantheon-number">01</span>
+                  <span class="god-glyph-symbol">⚡</span>
+                </div>
+                <div class="god-title-wrap">
+                  <div class="god-greek-title">Ζεύς</div>
+                  <h3 class="god-main-name">Zeus</h3>
+                  <div class="god-roman-sub">Júpiter</div>
+                </div>
+                <span class="god-domain-tag">Céu & Trovão</span>
+                <p class="god-short-summary">Rei dos deuses; detém o raio e a soberania divina sobre a ordem celestial e os destinos.</p>
+                <button class="card-flip-action" type="button">↻ Ver genealogia</button>
+              </article>
+              <article class="god-card-face god-card-back">
+                <div class="back-header">
+                  <div class="back-title">Zeus</div>
+                </div>
+                <div class="back-section"><span class="back-label">Genealogia</span><div class="back-value">Filho de Cronos e Reia; pai de Atena, Apolo, Ártemis, Hermes e muitos outros.</div></div>
+                <div class="back-section"><span class="back-label">Símbolos</span><div class="back-value">Raio, águia, oráculo de Delfos, trono celestial.</div></div>
+                <div class="back-section"><span class="back-label">Nota</span><div class="back-value variant-note">A figura central do panteão é a da soberania, mas também da justiça e da violência divina.</div></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="god-flip-card" data-category="sabedoria">
+            <div class="god-flip-inner">
+              <article class="god-card-face god-card-front">
+                <div class="god-card-icon-header">
+                  <span class="god-pantheon-number">02</span>
+                  <span class="god-glyph-symbol">🛡️</span>
+                </div>
+                <div class="god-title-wrap">
+                  <div class="god-greek-title">Ἀθηνᾶ</div>
+                  <h3 class="god-main-name">Atena</h3>
+                  <div class="god-roman-sub">Minerva</div>
+                </div>
+                <span class="god-domain-tag">Sabedoria & Estratégia</span>
+                <p class="god-short-summary">Deusa da inteligência, da técnica e da guerra justa, protetora das cidades e da razão clara.</p>
+                <button class="card-flip-action" type="button">↻ Ver genealogia</button>
+              </article>
+              <article class="god-card-face god-card-back">
+                <div class="back-header"><div class="back-title">Atena</div></div>
+                <div class="back-section"><span class="back-label">Genealogia</span><div class="back-value">Filha de Zeus, nascida pronta da cabeça do pai.</div></div>
+                <div class="back-section"><span class="back-label">Símbolos</span><div class="back-value">Oliveira, lança, escudo, coruja.</div></div>
+                <div class="back-section"><span class="back-label">Nota</span><div class="back-value variant-note">Representa a inteligência aplicada e a ordem cívica, não o impulso guerreiro cego.</div></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="god-flip-card" data-category="mar">
+            <div class="god-flip-inner">
+              <article class="god-card-face god-card-front">
+                <div class="god-card-icon-header">
+                  <span class="god-pantheon-number">03</span>
+                  <span class="god-glyph-symbol">🌊</span>
+                </div>
+                <div class="god-title-wrap">
+                  <div class="god-greek-title">Ποσειδῶν</div>
+                  <h3 class="god-main-name">Poseidon</h3>
+                  <div class="god-roman-sub">Netuno</div>
+                </div>
+                <span class="god-domain-tag">Mar & Terremotos</span>
+                <p class="god-short-summary">Senhor das águas profundas e dos terremotos, também associado ao cavalo e ao poder tumultuoso.</p>
+                <button class="card-flip-action" type="button">↻ Ver genealogia</button>
+              </article>
+              <article class="god-card-face god-card-back">
+                <div class="back-header"><div class="back-title">Poseidon</div></div>
+                <div class="back-section"><span class="back-label">Genealogia</span><div class="back-value">Filho de Cronos e Reia, irmão de Zeus e Hades.</div></div>
+                <div class="back-section"><span class="back-label">Símbolos</span><div class="back-value">Tridente, cavalos, tempestades e mar encapelado.</div></div>
+                <div class="back-section"><span class="back-label">Nota</span><div class="back-value variant-note">Seu poder é vasto, mas exige controle; seu domínio é o movimento inconstante da natureza.</div></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="god-flip-card" data-category="natureza">
+            <div class="god-flip-inner">
+              <article class="god-card-face god-card-front">
+                <div class="god-card-icon-header">
+                  <span class="god-pantheon-number">04</span>
+                  <span class="god-glyph-symbol">🌿</span>
+                </div>
+                <div class="god-title-wrap">
+                  <div class="god-greek-title">Δήμητρα</div>
+                  <h3 class="god-main-name">Deméter</h3>
+                  <div class="god-roman-sub">Ceres</div>
+                </div>
+                <span class="god-domain-tag">Terra & Colheita</span>
+                <p class="god-short-summary">Deusa da fertilidade, da agricultura e do ciclo anual da terra, vinculada à vida e à morte vegetal.</p>
+                <button class="card-flip-action" type="button">↻ Ver genealogia</button>
+              </article>
+              <article class="god-card-face god-card-back">
+                <div class="back-header"><div class="back-title">Deméter</div></div>
+                <div class="back-section"><span class="back-label">Genealogia</span><div class="back-value">Filha de Reia e Cronos, mãe de Perséfone.</div></div>
+                <div class="back-section"><span class="back-label">Símbolos</span><div class="back-value">Espiga de trigo, grãos, ciclos e estação da colheita.</div></div>
+                <div class="back-section"><span class="back-label">Nota</span><div class="back-value variant-note">Seu luto pela filha explica as estações e a alternância de plenitude e escassez.</div></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section table-section" aria-labelledby="table-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">Tabela semântica</span>
+          <h2 id="table-heading" class="section-title">Os doze principais deuses</h2>
+        </header>
+
+        <div class="table-responsive-container">
+          <table class="olympian-table">
+            <caption>Panatenaia dos deuses olímpicos</caption>
+            <thead>
+              <tr>
+                <th scope="col">Deus</th>
+                <th scope="col">Domínio</th>
+                <th scope="col">Símbolos</th>
+                <th scope="col">Atributos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="td-god-name">Zeus <small>Ζεύς</small></td><td>Céu, trovão, soberania</td><td>Raio, águia, trono</td><td>Força, ordem, justiça</td></tr>
+              <tr><td class="td-god-name">Atena <small>Ἀθηνᾶ</small></td><td>Sabedoria e guerra prudente</td><td>Oliva, lança, escudo</td><td>Razão, técnica, estratégia</td></tr>
+              <tr><td class="td-god-name">Poseidon <small>Ποσειδῶν</small></td><td>Mar, terremotos</td><td>Tridente, cavalo</td><td>Impulso, eros, domínio</td></tr>
+              <tr><td class="td-god-name">Deméter <small>Δήμητρα</small></td><td>Terra, colheita</td><td>Espiga de trigo</td><td>Fertilidade, ciclos da vida</td></tr>
+              <tr><td class="td-god-name">Apolo <small>Ἀπόλλων</small></td><td>Luz, música, profecia</td><td>Lira, touro, arco</td><td>Arte, harmonia, ordem</td></tr>
+              <tr><td class="td-god-name">Ártemis <small>Ἄρτεμις</small></td><td>Caça, lua, virgindade</td><td>Arco, veados, lua</td><td>Precisão, natureza, pureza</td></tr>
+              <tr><td class="td-god-name">Afrodite <small>Ἀφροδίτη</small></td><td>Amor e beleza</td><td>Concha, rosa, desejo</td><td>Paixão, atração, sensualidade</td></tr>
+              <tr><td class="td-god-name">Ares <small>Ἄρης</small></td><td>Guerra e violência</td><td>Espada, escudo, fogo</td><td>Fúria, coragem, destruição</td></tr>
+              <tr><td class="td-god-name">Hermes <small>Ἑρμῆς</small></td><td>Comércio, mensageiros</td><td>Cadáveres, sandálias aladas</td><td>Velocidade, astúcia, troca</td></tr>
+              <tr><td class="td-god-name">Héstia <small>Ἑστία</small></td><td>Fogo do lar</td><td>Fogo, chama</td><td>Lar, estabilidade, sacralidade</td></tr>
+              <tr><td class="td-god-name">Hades <small>Ἅιδης</small></td><td>Mundo inferior</td><td>Elmo invisível, tesouros</td><td>Morte, riqueza subterrânea</td></tr>
+              <tr><td class="td-god-name">Dioniso <small>Διόνυσος</small></td><td>Vinho, êxtase, transformação</td><td>Uvas, tirso, leão</td><td>Ritmo, embriaguez, liberdade</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-scholarly-note">
+          <strong>Nota crítica:</strong> o conjunto dos deuses do Olimpo não é uma tabela universalmente rígida em todas as tradições poéticas; há variações regionais e literárias, mas a tradição canônica helenística e clássica a mantém como estrutura central da religião e da imaginação grega.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>OLYMPUS</h4>
+          <p>Portal acadêmico e interativo dedicado ao estudo e valorização da mitologia grega clássica, com design refinado e conteúdo fundamentado.</p>
+          <div class="footer-quote">“A forma e a memória são um mesmo princípio.”</div>
+        </div>
+        <div class="footer-col">
+          <h5>Navegação</h5>
+          <ul class="footer-links"><li><a href="index.html">Início</a></li><li><a href="deuses.html">Deuses & Mapa</a></li><li><a href="mitos.html">Mitos & Tempo</a></li><li><a href="video.html">Vídeo</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h5>Projeto</h5>
+          <ul class="footer-links"><li><a href="video.html#autoras-heading">Amanda & Bianca</a></li><li><a href="video.html#criterios">Fontes</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h5>Estilo</h5>
+          <p style="font-size:0.85rem; line-height:1.5; margin-bottom:0.8rem;">A identidade visual usa meandro grego, dourados clássicos e contrastes de pedra, mar e céu.</p>
+          <span class="badge">Design Helênico</span>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega Clássica.</p><p>Visão interativa do panteão grego.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
