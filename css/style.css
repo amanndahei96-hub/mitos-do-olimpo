@@ -1,75 +1,1595 @@
-/* Ajustes finais: navegação, imagens e acessibilidade responsiva. */
-.nav-toggle:focus-visible,
-.nav-link:focus-visible,
-.btn:focus-visible,
-button:focus-visible,
-a:focus-visible,
-.map-node:focus-visible {
-  outline: 2px solid var(--gold-light);
-  outline-offset: 4px;
+/* ==========================================================================
+   OLYMPUS — CSS MASTER STYLESHEET
+   Identidade Visual Mitológica Clássica & Moderna
+   Desenvolvido para critérios de Corretude, Completude e Criatividade
+   ========================================================================== */
+
+/* --- Importação de Tipografia Clássica e Contemporânea --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- Variáveis Globais de Design (Design Tokens) --- */
+:root {
+  /* Paleta de Cores Mitológica */
+  --bg-primary: #070a12;
+  --bg-secondary: #0d1322;
+  --bg-card: rgba(16, 24, 43, 0.85);
+  --bg-card-hover: rgba(22, 33, 58, 0.95);
+  --bg-glass: rgba(13, 19, 34, 0.75);
+  
+  /* Ouros e Metais Olímpicos */
+  --gold-pure: #d4af37;
+  --gold-light: #f5e7a9;
+  --gold-dark: #996515;
+  --gold-glow: rgba(212, 175, 55, 0.35);
+  --gold-glow-intense: rgba(212, 175, 55, 0.65);
+  --bronze: #c57d38;
+
+  /* Mármores e Textos */
+  --marble-pure: #ffffff;
+  --marble-light: #f8f9fa;
+  --marble-muted: #cbd5e1;
+  --text-dim: #94a3b8;
+  
+  /* Elementos Celestiais & Acentos */
+  --sky-blue: #38bdf8;
+  --ocean-blue: #0284c7;
+  --crimson-ares: #dc2626;
+  --border-gold: rgba(212, 175, 55, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  /* Tipografia */
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-decorative: 'Cinzel Decorative', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Espaçamentos e Estrutura */
+  --container-max: 1240px;
+  --nav-height: 80px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 0 25px var(--gold-glow);
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-section {
+/* --- Reset e Configurações Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
   background-color: var(--bg-primary);
-  background-position: center 42%;
-  background-size: cover;
+  color: var(--marble-light);
 }
 
-.hero-section > .hero-overlay {
-  background: linear-gradient(180deg, rgba(7, 10, 18, .42), rgba(7, 10, 18, .92));
+body {
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 40%, rgba(56, 189, 248, 0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #070a12 0%, #0d1322 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Padrão de Meandro Grego (Greek Key / Guarda Grega) */
+.greek-border-pattern {
+  height: 8px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--gold-pure) 0px,
+    var(--gold-pure) 10px,
+    transparent 10px,
+    transparent 14px,
+    var(--gold-dark) 14px,
+    var(--gold-dark) 24px
+  );
+  opacity: 0.6;
+}
+
+/* Links Acessíveis e Tipografia */
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover, a:focus-visible {
+  color: var(--gold-pure);
+  text-shadow: 0 0 10px var(--gold-glow);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  color: var(--marble-pure);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  color: var(--marble-muted);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botões Estilizados */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-pure), var(--gold-dark));
+  color: #070a12;
+  border-color: var(--gold-light);
+  box-shadow: 0 4px 15px var(--gold-glow);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-pure));
+  color: #000;
+  box-shadow: 0 6px 25px var(--gold-glow-intense);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: rgba(13, 19, 34, 0.6);
+  color: var(--gold-light);
+  border-color: var(--gold-pure);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--marble-pure);
+  border-color: var(--gold-light);
+  box-shadow: 0 0 20px var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+/* Badges e Pílulas */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid var(--border-gold);
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-light);
+}
+
+/* Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   HEADER & NAVEGAÇÃO PRINCIPAL
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(7, 10, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-gold);
+  transition: all var(--transition-fast);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: var(--gold-pure);
+}
+
+.brand-logo svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--gold-pure);
+  filter: drop-shadow(0 0 8px var(--gold-glow));
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--marble-muted);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background: var(--gold-pure);
+  box-shadow: 0 0 8px var(--gold-pure);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--gold-pure);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   EXPERIÊNCIA DE ENTRADA (HERO BANNER IMPACTANTE)
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(180deg, rgba(7, 10, 18, 0.7) 0%, rgba(7, 10, 18, 0.95) 100%),
+    radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+  z-index: 1;
 }
 
 .hero-canvas {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  animation: heroEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-sub-top {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-pure);
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--border-gold);
+  border-radius: 50px;
+}
+
+.hero-title {
+  font-family: var(--font-decorative);
+  font-size: clamp(3.2rem, 8vw, 6.5rem);
+  color: var(--marble-pure);
+  text-shadow: 
+    0 0 20px var(--gold-glow),
+    0 4px 10px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  background: linear-gradient(180deg, #ffffff 30%, var(--gold-light) 75%, var(--gold-pure) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-tagline {
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-weight: 300;
+  color: var(--marble-muted);
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+@keyframes heroEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================================
+   SEÇÕES GERAIS E TÍTULOS
+   ========================================================================== */
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.section-alt {
+  background: rgba(13, 19, 34, 0.5);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-kicker {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--gold-pure);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold-pure);
+  margin: 0.8rem auto 0;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--marble-muted);
+}
+
+/* ==========================================================================
+   GALERIA DE IMAGENS HISTÓRICAS REAIS & DESTAQUES
+   ========================================================================== */
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.artifact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.artifact-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-light);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px var(--gold-glow);
+}
+
+.artifact-img-wrap {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background: #000;
 }
 
 .artifact-img-wrap img {
-  object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s ease;
 }
 
-.map-node:focus-visible {
-  filter: drop-shadow(0 0 10px var(--gold-light));
+.artifact-card:hover .artifact-img-wrap img {
+  transform: scale(1.05);
 }
 
-[hidden] {
-  display: none !important;
+.artifact-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(7, 10, 18, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--gold-pure);
+  color: var(--gold-light);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-family: var(--font-serif);
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.artifact-content {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.artifact-content h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+  color: var(--marble-pure);
+}
+
+.artifact-origin {
+  font-size: 0.82rem;
+  color: var(--gold-pure);
+  font-family: var(--font-serif);
+  margin-bottom: 1rem;
+}
+
+.artifact-content p {
+  font-size: 0.94rem;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   MAPA INTERATIVO DO OLIMPO (CRITÉRIO C.2)
+   ========================================================================== */
+.olympus-map-wrapper {
+  background: radial-gradient(circle at center, #111b33 0%, #070a14 85%);
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card), inset 0 0 50px rgba(0, 0, 0, 0.8);
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.map-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.map-visual-container {
+  position: relative;
+  min-height: 480px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mountain-svg {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+}
+
+/* Nós Interativos do Olimpo */
+.map-node {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.map-node circle.pin-outer {
+  fill: rgba(212, 175, 55, 0.25);
+  stroke: var(--gold-pure);
+  stroke-width: 1.5;
+  transition: all 0.3s ease;
+}
+
+.map-node circle.pin-core {
+  fill: var(--gold-pure);
+  transition: all 0.3s ease;
+}
+
+.map-node text {
+  font-family: var(--font-serif);
+  font-size: 11px;
+  fill: var(--marble-light);
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+  pointer-events: none;
+}
+
+.map-node:hover circle.pin-outer,
+.map-node.active circle.pin-outer {
+  r: 22;
+  fill: rgba(212, 175, 55, 0.5);
+  stroke: var(--marble-pure);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 8px var(--gold-pure));
+}
+
+.map-node:hover circle.pin-core,
+.map-node.active circle.pin-core {
+  fill: #fff;
+}
+
+/* Painel Lateral do Mapa */
+.map-inspector {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.map-inspector-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.inspector-greek-name {
+  font-size: 0.85rem;
+  color: var(--gold-pure);
+  font-family: var(--font-serif);
+  letter-spacing: 0.1em;
+}
+
+.inspector-name {
+  font-size: 1.8rem;
+  color: var(--marble-pure);
+  margin-top: 0.2rem;
+}
+
+.inspector-domain {
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.inspector-bio {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--marble-muted);
+  margin-bottom: 1.2rem;
+}
+
+.inspector-attributes {
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--marble-muted);
+  margin-bottom: 1.5rem;
+}
+
+.inspector-attributes li {
+  margin-bottom: 0.4rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.inspector-attributes li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--gold-pure);
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   CARDS MITOLÓGICOS INTERATIVOS 3D COM FLIP (CRITÉRIO C.3)
+   ========================================================================== */
+.gods-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  background: rgba(13, 19, 34, 0.7);
+  border: 1px solid var(--border-subtle);
+  color: var(--marble-muted);
+  padding: 0.5rem 1.2rem;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold-pure);
+  color: var(--gold-light);
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+.gods-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.2rem;
+}
+
+/* Estrutura 3D Flip */
+.god-flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  min-height: 480px;
+}
+
+.god-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.god-flip-card.flipped .god-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.god-card-face {
+  position: absolute;
+  inset: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  box-shadow: var(--shadow-card);
+}
+
+/* Frente do Card */
+.god-card-front {
+  background: 
+    radial-gradient(circle at top right, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+    linear-gradient(180deg, #10182b 0%, #0a0f1d 100%);
+}
+
+.god-card-icon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.god-pantheon-number {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: var(--gold-pure);
+  opacity: 0.8;
+  letter-spacing: 0.1em;
+}
+
+.god-glyph-symbol {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--gold-pure);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.god-title-wrap {
+  margin-bottom: 1rem;
+}
+
+.god-greek-title {
+  font-size: 0.88rem;
+  font-family: var(--font-serif);
+  color: var(--gold-pure);
+  letter-spacing: 0.08em;
+}
+
+.god-main-name {
+  font-size: 1.75rem;
+  color: var(--marble-pure);
+  margin-top: 0.1rem;
+}
+
+.god-roman-sub {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.god-domain-tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  color: var(--sky-blue);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.god-short-summary {
+  font-size: 0.92rem;
+  color: var(--marble-muted);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.card-flip-action {
+  width: 100%;
+  padding: 0.65rem;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-sm);
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.card-flip-action:hover {
+  background: rgba(212, 175, 55, 0.25);
+  color: #fff;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* Verso do Card */
+.god-card-back {
+  transform: rotateY(180deg);
+  background: 
+    radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, #0d1424 0%, #070b14 100%);
+  border-color: var(--gold-pure);
+}
+
+.back-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.back-title {
+  font-size: 1.2rem;
+  color: var(--gold-pure);
+}
+
+.back-section {
+  margin-bottom: 0.9rem;
+}
+
+.back-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.back-value {
+  font-size: 0.88rem;
+  color: var(--marble-light);
+  line-height: 1.45;
+}
+
+.back-value.variant-note {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.08);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border-left: 2px solid var(--gold-pure);
+}
+
+/* ==========================================================================
+   TABELA SEMÂNTICA DOS 12 DEUSES OLÍMPICOS (CRITÉRIOS A & B)
+   ========================================================================== */
+.table-section {
+  padding: 4rem 0;
+}
+
+.table-responsive-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-gold);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.olympian-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+  min-width: 860px;
+}
+
+.olympian-table caption {
+  padding: 1.2rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  background: rgba(7, 10, 18, 0.95);
+  border-bottom: 1px solid var(--border-gold);
+  text-align: left;
+}
+
+.olympian-table thead tr {
+  background: rgba(212, 175, 55, 0.12);
+  border-bottom: 2px solid var(--gold-pure);
+}
+
+.olympian-table th {
+  padding: 1rem 1.2rem;
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  color: var(--gold-pure);
+  font-weight: 700;
+}
+
+.olympian-table td {
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--marble-muted);
+  vertical-align: top;
+}
+
+.olympian-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.06);
+}
+
+.olympian-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.td-god-name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--marble-pure);
+}
+
+.td-god-name small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--gold-pure);
+  font-weight: normal;
+}
+
+.table-scholarly-note {
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 3px solid var(--gold-pure);
+  padding: 1.2rem 1.5rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--marble-muted);
+}
+
+.table-scholarly-note strong {
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+}
+
+/* ==========================================================================
+   LINHA DO TEMPO MITOLÓGICA INTERATIVA (CRITÉRIO C.4)
+   ========================================================================== */
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, var(--gold-pure) 15%, var(--gold-pure) 85%, transparent);
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3.5rem;
+  width: 50%;
+  padding: 0 2.5rem;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-badge {
+  position: absolute;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--gold-pure);
+  box-shadow: 0 0 15px var(--gold-glow-intense);
+  z-index: 5;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .timeline-badge {
+  right: -12px;
+}
+
+.timeline-item:nth-child(even) .timeline-badge {
+  left: -12px;
+}
+
+.timeline-item:hover .timeline-badge {
+  transform: scale(1.3);
+  background: var(--gold-pure);
+}
+
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-light);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 20px var(--gold-glow);
+}
+
+.timeline-era {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: var(--gold-pure);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+  font-size: 1.35rem;
+  color: var(--marble-pure);
+  margin-bottom: 0.8rem;
+}
+
+.timeline-body {
+  font-size: 0.92rem;
+  color: var(--marble-muted);
+  line-height: 1.6;
+}
+
+.timeline-expandable {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--border-subtle);
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  display: none;
+}
+
+.timeline-expandable.open {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+.timeline-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--gold-pure);
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.timeline-toggle-btn:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   CURIOSIDADES MITOLÓGICAS (CRITÉRIO C.5)
+   ========================================================================== */
+.curiosities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.curiosity-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.curiosity-card::before {
+  content: '✦';
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2.2rem;
+  color: var(--gold-pure);
+  opacity: 0.15;
+}
+
+.curiosity-card:hover {
+  border-color: var(--gold-pure);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.curiosity-tag {
+  font-size: 0.75rem;
+  font-family: var(--font-serif);
+  color: var(--gold-pure);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.curiosity-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  color: var(--marble-pure);
+}
+
+.curiosity-card p {
+  font-size: 0.92rem;
+  color: var(--marble-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   SALA MULTIMÍDIA & VÍDEO (CRITÉRIO C.7, B, & PREPARAÇÃO 10)
+   ========================================================================== */
+.cinema-wrapper {
+  background: radial-gradient(circle at center, #131c31 0%, #060910 80%);
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-card), 0 0 40px rgba(212, 175, 55, 0.15);
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cinema-screen-frame {
+  position: relative;
+  background: #000;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--gold-pure);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 20px var(--gold-glow);
+  aspect-ratio: 16 / 9;
+  max-width: 960px;
+  margin: 0 auto 1.5rem;
+}
+
+.cinema-video-element {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #000;
+}
+
+.cinema-controls-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  background: rgba(13, 19, 34, 0.8);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.video-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.cinema-quick-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.cinema-btn-tool {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-gold);
+  color: var(--marble-light);
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-family: var(--font-serif);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cinema-btn-tool:hover {
+  background: var(--gold-pure);
+  color: #000;
+}
+
+/* Modo Teatro / Cinema Focus */
+body.theater-mode .site-header,
+body.theater-mode .site-footer,
+body.theater-mode .section:not(.video-hero-section) {
+  opacity: 0.15;
+  pointer-events: none;
+  filter: blur(4px);
+  transition: all 0.5s ease;
+}
+
+body.theater-mode .cinema-screen-frame {
+  max-width: 1140px;
+  box-shadow: 0 0 100px rgba(212, 175, 55, 0.4);
+}
+
+/* Cards dos Integrantes */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--gold-glow);
+  border-color: var(--gold-light);
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  border: 2px solid var(--gold-pure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+.team-name {
+  font-size: 1.2rem;
+  color: var(--marble-pure);
+  margin-bottom: 0.3rem;
+}
+
+.team-role {
+  font-size: 0.82rem;
+  color: var(--gold-pure);
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+}
+
+.team-task {
+  font-size: 0.88rem;
+  color: var(--marble-muted);
+  line-height: 1.5;
+}
+
+/* Bloco de Roteiro e Estrutura da Apresentação (Requisito 10) */
+.presentation-guide-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.guide-step-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.guide-step-item {
+  background: rgba(7, 10, 18, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--gold-pure);
+  padding: 1.4rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.step-time {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  color: var(--gold-pure);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.step-title {
+  font-size: 1.05rem;
+  color: var(--marble-pure);
+  margin-bottom: 0.5rem;
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  color: var(--marble-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   REFERÊNCIAS BIBLIOGRÁFICAS (CRITÉRIO A - CORRETUDE)
+   ========================================================================== */
+.bibliography-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.bib-item {
+  background: rgba(13, 19, 34, 0.6);
+  border-left: 3px solid var(--gold-pure);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.92rem;
+  color: var(--marble-muted);
+}
+
+.bib-item strong {
+  color: var(--marble-pure);
+}
+
+.bib-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-family: var(--font-serif);
+  color: var(--gold-pure);
+  background: rgba(212, 175, 55, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+/* ==========================================================================
+   RODAPÉ UNIFICADO (CRITÉRIO B)
+   ========================================================================== */
+.site-footer {
+  margin-top: auto;
+  background: #04060c;
+  border-top: 1px solid var(--border-gold);
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand h4 {
+  font-size: 1.5rem;
+  color: var(--gold-pure);
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 340px;
+}
+
+.footer-col h5 {
+  font-size: 1rem;
+  color: var(--marble-pure);
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--gold-pure);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--gold-light);
+  padding-left: 4px;
+}
+
+.footer-quote {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  border-left: 2px solid var(--gold-pure);
+  padding-left: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.82rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE & MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .map-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline-container::before {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: left !important;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-badge,
+  .timeline-item:nth-child(even) .timeline-badge {
+    left: 8px;
+    right: auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .artifact-grid,
-  .curiosities-grid {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: rgba(7, 10, 18, 0.98);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--gold-pure);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.2rem;
+    transform: translateY(-150%);
+    transition: transform 0.4s ease;
+    z-index: 999;
+  }
+
+  .nav-list.active {
+    transform: translateY(0);
+  }
+
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 
-  .olympus-map-wrapper,
-  .cinema-wrapper {
-    padding: 1rem;
+  .hero-actions {
+    flex-direction: column;
   }
 
-  .map-visual-container {
-    min-height: 330px;
+  .btn {
+    width: 100%;
   }
 
-  .map-inspector {
-    min-height: 0;
-  }
-
-  .cinema-quick-buttons {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .section {
-    padding: 3.5rem 0;
+  .cinema-controls-bar {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
