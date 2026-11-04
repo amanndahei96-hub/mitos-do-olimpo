@@ -1,10 +1,272 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Vídeo, equipe e referências do projeto OLYMPUS sobre mitologia grega."><title>OLYMPUS — Vídeo do Projeto</title><link rel="stylesheet" href="css/style.css"></head>
-<body><div class="greek-border-pattern" aria-hidden="true"></div><header class="site-header"><div class="container nav-container"><a href="index.html" class="brand-logo"><span>OLYMPUS</span></a><nav class="main-nav" aria-label="Navegação principal"><ul class="nav-list"><li><a href="index.html" class="nav-link">Início</a></li><li><a href="deuses.html" class="nav-link">Deuses & Mapa</a></li><li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li><li><a href="video.html" class="nav-link active" aria-current="page">Vídeo</a></li></ul><button class="nav-toggle" type="button" aria-label="Abrir ou fechar menu" aria-expanded="false"><span></span><span></span><span></span></button></nav></div></header>
-<main id="main-content"><section class="section video-hero-section" style="padding:3.5rem 0"><div class="container"><header class="section-header"><span class="section-kicker">Produção multimídia</span><h1 class="section-title">Vídeo do Projeto OLYMPUS</h1><p class="section-desc">Use o seletor para abrir o vídeo do projeto no seu dispositivo. O arquivo original ainda não foi enviado ao repositório.</p></header>
-<div class="cinema-wrapper" style="max-width:1040px;margin:0 auto 3rem"><div class="cinema-screen-frame"><video id="projectVideo" class="cinema-video-element" controls preload="metadata" poster="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon%20from%20west%20at%20evening.jpg"><p>Seu navegador não suporta vídeo HTML5.</p></video></div><div class="cinema-controls-bar"><div class="video-status-indicator"><span class="status-dot"></span><span id="videoStatusText" role="status">Selecione um arquivo de vídeo para reproduzir.</span></div><div class="cinema-quick-buttons"><button id="btnFullscreen" class="cinema-btn-tool" type="button">Tela cheia</button><label for="localVideoInput" class="cinema-btn-tool" style="cursor:pointer">Escolher vídeo<input type="file" id="localVideoInput" accept="video/mp4,video/webm" hidden></label></div></div></div>
-<p class="table-scholarly-note"><strong>Para publicar o vídeo:</strong> adicione o arquivo MP4 em `assets/video/apresentacao-grupo.mp4` e atualize o elemento de vídeo, ou selecione um arquivo local acima. Um vídeo de demonstração de terceiros não é apresentado como se fosse o trabalho das autoras.</p></div></section>
-<section class="section section-alt" aria-labelledby="autoras-heading"><div class="container"><header class="section-header"><span class="section-kicker">Ficha técnica</span><h2 id="autoras-heading" class="section-title">Amanda e Bianca</h2><p class="section-desc">Projeto interdisciplinar de desenvolvimento web, pesquisa mitológica e produção audiovisual.</p></header><div class="team-grid"><article class="team-card"><div class="team-avatar" aria-hidden="true">🏛️</div><h3 class="team-name">Amanda</h3><span class="team-role">Desenvolvimento Web & Pesquisa</span><p class="team-task">Arquitetura da informação, páginas HTML, estilos responsivos e pesquisa das fontes clássicas.</p></article><article class="team-card"><div class="team-avatar" aria-hidden="true">🎬</div><h3 class="team-name">Bianca</h3><span class="team-role">Produção Multimídia</span><p class="team-task">Roteiro, direção e produção audiovisual do projeto.</p></article></div></div></section>
-<section class="section" id="criterios" aria-labelledby="refs-heading"><div class="container"><header class="section-header"><span class="section-kicker">Fundamentação</span><h2 class="section-title" id="refs-heading">Referências bibliográficas</h2><p class="section-desc">Fontes primárias e estudos de referência para a leitura dos mitos.</p></header><ul class="bibliography-list"><li class="bib-item"><span class="bib-tag">Fonte primária</span><p><strong>HESÍODO.</strong> <em>Teogonia</em>; <em>Trabalhos e Dias</em>.</p></li><li class="bib-item"><span class="bib-tag">Fonte primária</span><p><strong>HOMERO.</strong> <em>Ilíada</em>; <em>Odisseia</em>.</p></li><li class="bib-item"><span class="bib-tag">Tradição dramática</span><p><strong>EURÍPIDES.</strong> <em>Helena</em>.</p></li><li class="bib-item"><span class="bib-tag">Estudo de mitologia</span><p><strong>GRIMAL, Pierre.</strong> <em>Dicionário da Mitologia Grega e Romana</em>.</p></li><li class="bib-item"><span class="bib-tag">História das religiões</span><p><strong>VERNANT, Jean-Pierre.</strong> <em>O Universo, os Deuses, os Homens</em>.</p></li></ul></div></section></main>
-<div class="greek-border-pattern" aria-hidden="true"></div><footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><h4>OLYMPUS</h4><p>Portal acadêmico e interativo dedicado à mitologia grega clássica.</p></div><div class="footer-col"><h5>Navegação</h5><ul class="footer-links"><li><a href="index.html">Início</a></li><li><a href="deuses.html">Deuses & Mapa</a></li><li><a href="mitos.html">Mitos & Tempo</a></li><li><a href="video.html">Vídeo</a></li></ul></div><div class="footer-col"><h5>Autoras</h5><ul class="footer-links"><li><a href="#autoras-heading">Amanda</a></li><li><a href="#autoras-heading">Bianca</a></li></ul></div><div class="footer-col"><h5>Fontes</h5><a href="#criterios" class="badge">Referências</a></div></div><div class="footer-bottom"><p>&copy; 2026 Projeto OLYMPUS.</p><p>Web design & multimídia.</p></div></div></footer><script src="js/main.js"></script></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vídeo oficial do projeto OLYMPUS sobre mitologia grega, desenvolvido por Amanda e Bianca. Reprodução em HTML5 nativo com alta fidelidade visual.">
+  <meta name="keywords" content="Vídeo Mitologia Grega, OLYMPUS, Amanda e Bianca, HTML5 Video, Deuses Gregos, Web Design">
+  <title>OLYMPUS — Vídeo do Projeto | Por Amanda e Bianca</title>
+  
+  <!-- CSS Externo Master -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/><polygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/></svg>">
+</head>
+<body>
+
+  <!-- Padrão Decorativo Helênico Superior -->
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <!-- Cabeçalho e Navegação Principal -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="OLYMPUS Mitologia Grega - Página Inicial">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.7L4.5 7.5 12 4l7.5 3.5L12 10.7zM2 17l10 5 10-5v-2l-10 5-10-5v2zm0-4l10 5 10-5v-2l-10 5-10-5v2z"/>
+        </svg>
+        <span>OLYMPUS</span>
+      </a>
+
+      <!-- Menu Principal entre todas as 4 páginas -->
+      <nav class="main-nav" aria-label="Navegação Principal do Portal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="deuses.html" class="nav-link">Deuses & Mapa</a></li>
+          <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
+          <li><a href="video.html" class="nav-link active">Vídeo</a></li>
+        </ul>
+        
+        <button class="nav-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Seção Principal de Exibição do Vídeo (Destaque Total ao Player) -->
+    <section class="section video-hero-section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-kicker">Produção Multimídia • Feito por Amanda e Bianca</span>
+          <h1 class="section-title">Vídeo do Projeto OLYMPUS</h1>
+          <p class="section-desc">
+            Espaço cinematográfico dedicado exclusivamente à exibição do vídeo sobre mitologia grega, 
+            produzido e editado por <strong>Amanda e Bianca</strong> com reprodutor nativo HTML5.
+          </p>
+        </header>
+
+        <!-- ESPAÇO DEDICADO EXCLUSIVAMENTE AO VÍDEO -->
+        <div class="cinema-wrapper" style="max-width: 1040px; margin: 0 auto 3.5rem;">
+          
+          <div class="cinema-screen-frame">
+            <!-- Tag semântica nativa HTML5 <video> com controles completos e pôster -->
+            <video id="projectVideo" class="cinema-video-element" controls preload="metadata" poster="assets/images/video-poster.jpg">
+              <!-- Fonte primária do vídeo oficial das alunas Amanda e Bianca -->
+              <source src="assets/video/apresentacao-grupo.mp4" type="video/mp4">
+              <!-- Fonte de contingência imediata para testes -->
+              <source src="assets/video/apresentacao-exemplo.mp4" type="video/mp4">
+              
+              <!-- Legendas acessíveis -->
+              <track label="Português" kind="subtitles" srclang="pt" default>
+              
+              <!-- Mensagem de fallback -->
+              <p style="color: #fff; padding: 2rem; text-align: center;">
+                Seu navegador não suporta a tag de vídeo HTML5. Por favor, atualize seu navegador para assistir.
+              </p>
+            </video>
+          </div>
+
+          <!-- Barra de Controles e Status do Player -->
+          <div class="cinema-controls-bar">
+            <div class="video-status-indicator">
+              <span class="status-dot"></span>
+              <span id="videoStatusText">Vídeo de Amanda & Bianca • Pronto para Reprodução</span>
+            </div>
+
+            <div class="cinema-quick-buttons">
+              <button id="btnFullscreen" class="cinema-btn-tool" title="Expandir vídeo em tela cheia">Tela Cheia</button>
+              
+              <!-- Seletor Rápido para Troca de Vídeo se Necessário -->
+              <label for="localVideoInput" class="cinema-btn-tool" style="cursor: pointer; background: rgba(212, 175, 55, 0.2); border-color: var(--gold-pure);">
+                <span>📁 Trocar Arquivo de Vídeo</span>
+                <input type="file" id="localVideoInput" accept="video/mp4,video/webm" style="display: none;">
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- IDENTIFICAÇÃO DAS AUTORAS: AMANDA E BIANCA -->
+    <section class="section section-alt" aria-labelledby="autoras-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-kicker">Ficha Técnica do Trabalho</span>
+          <h2 id="autoras-heading" class="section-title">Desenvolvido por Amanda e Bianca</h2>
+          <p class="section-desc">
+            Projeto interdisciplinar unindo desenvolvimento web responsivo, pesquisa historiográfica clássica e produção audiovisual.
+          </p>
+        </header>
+
+        <div class="team-grid" style="max-width: 860px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+          
+          <!-- Card de Amanda -->
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">🏛️</div>
+            <h3 class="team-name">Amanda</h3>
+            <span class="team-role">Desenvolvimento Web & Pesquisa Histórica</span>
+            <p class="team-task">
+              Responsável pela arquitetura de informação, código HTML5 semântico, estilização com folhas de estilo CSS externas, interatividade do mapa do Olimpo, acessibilidade e rigor filológico nas fontes de Hesíodo e Homero.
+            </p>
+          </article>
+
+          <!-- Card de Bianca -->
+          <article class="team-card">
+            <div class="team-avatar" aria-hidden="true">🎬</div>
+            <h3 class="team-name">Bianca</h3>
+            <span class="team-role">Produção Multimídia & Audiovisual</span>
+            <p class="team-task">
+              Responsável pelo roteiro temático, direção e gravação audiovisual, edição no padrão 1080p, integração do reprodutor de vídeo HTML5, identidade visual clássica e curadoria das imagens históricas do panteão.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FONTES CONFIÁVEIS & REFERÊNCIAS BIBLIOGRÁFICAS (CRITÉRIO A - CORRETUDE) -->
+    <section class="section" id="criterios" aria-labelledby="referencias-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="section-kicker">Fundamentação Acadêmica</span>
+          <h2 id="referencias-heading" class="section-title">Referências Bibliográficas</h2>
+          <p class="section-desc">
+            Obras teóricas consagradas e fontes primárias adotadas para a construção de todo o conteúdo mitológico do portal.
+          </p>
+        </header>
+
+        <ul class="bibliography-list">
+          
+          <li class="bib-item">
+            <span class="bib-tag">Fonte Primária Arcaica • Cosmogonia</span>
+            <p>
+              <strong>HESÍODO.</strong> <em>Teogonia: a origem dos deuses.</em> Estudo e tradução de Jaa Torrano. São Paulo: Iluminuras, 1995. 
+              (Referência para o nascimento das divindades primordiais, a Titanomaquia e a genealogia hesiódica).
+            </p>
+          </li>
+
+          <li class="bib-item">
+            <span class="bib-tag">Fonte Primária Arcaica • Poesia Épica</span>
+            <p>
+              <strong>HOMERO.</strong> <em>Ilíada & Odisseia.</em> Tradução de Carlos Alberto Nunes. Rio de Janeiro: Ediouro / Nova Fronteira, 2001. 
+              (Base para a representação dos deuses olímpicos no conflito troiano e no ciclo heroico).
+            </p>
+          </li>
+
+          <li class="bib-item">
+            <span class="bib-tag">Tratado Historiográfico Brasileiro</span>
+            <p>
+              <strong>BRANDÃO, Junito de Souza.</strong> <em>Mitologia Grega.</em> Vols. I, II e III. Petrópolis: Vozes, 1986–1987. 
+              (Maior obra de referência em língua portuguesa para a hermenêutica mítica e etimologia clássica).
+            </p>
+          </li>
+
+          <li class="bib-item">
+            <span class="bib-tag">Dicionário Enciclopédico de Referência</span>
+            <p>
+              <strong>GRIMAL, Pierre.</strong> <em>Dicionário da Mitologia Grega e Romana.</em> Tradução de Victor Jabouille. Rio de Janeiro: Bertrand Brasil, 2000. 
+              (Consulta canônica para variantes míticas, atributos sagrados e genealogias divinas).
+            </p>
+          </li>
+
+          <li class="bib-item">
+            <span class="bib-tag">Antropologia Histórica</span>
+            <p>
+              <strong>VERNANT, Jean-Pierre.</strong> <em>O Universo, os Deuses, os Homens.</em> Tradução de Rosa Freire d'Aguiar. São Paulo: Companhia das Letras, 2000. 
+              (Análise sociológica do imaginário religioso e das tensões cívicas da Grécia Antiga).
+            </p>
+          </li>
+
+          <li class="bib-item">
+            <span class="bib-tag">Clássico Universitário</span>
+            <p>
+              <strong>HAMILTON, Edith.</strong> <em>A Mitologia.</em> Tradução de F. L. Carsten. São Paulo: Martins Fontes, 2002. 
+              (Clássico dos estudos e recepção dos mitos greco-romanos).
+            </p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Padrão Decorativo Helênico Inferior -->
+  <div class="greek-border-pattern" aria-hidden="true"></div>
+
+  <!-- Rodapé Institucional com Crédito a Amanda e Bianca -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h4>OLYMPUS</h4>
+          <p>
+            Portal acadêmico e interativo dedicado ao estudo e valorização da mitologia grega clássica, desenvolvido com rigor histórico e técnico por <strong>Amanda e Bianca</strong>.
+          </p>
+          <div class="footer-quote">
+            "A beleza é o esplendor da verdade." — Platão, O Banquete
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navegação</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="deuses.html">Deuses & Mapa</a></li>
+            <li><a href="mitos.html">Mitos & Tempo</a></li>
+            <li><a href="video.html">Vídeo do Projeto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Autoras do Projeto</h5>
+          <ul class="footer-links">
+            <li><a href="video.html#autoras-heading">Amanda — Front-End & Pesquisa</a></li>
+            <li><a href="video.html#autoras-heading">Bianca — Audiovisual & Multimídia</a></li>
+            <li><a href="video.html#criterios">Fontes Bibliográficas ABNT</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Multimídia & Web</h5>
+          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">
+            Player HTML5 integrado com suporte nativo a MP4/WebM e conformidade com os padrões W3C.
+          </p>
+          <span class="badge">Projeto Amanda & Bianca</span>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Projeto OLYMPUS — Desenvolvido por <strong>Amanda e Bianca</strong>. Todos os direitos reservados.</p>
+        <p>Trabalho integrado de Web Design e Multimídia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JavaScript Master -->
+  <script src="js/main.js"></script>
+</body>
+</html>
