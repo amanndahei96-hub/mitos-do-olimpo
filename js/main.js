@@ -55,11 +55,7 @@ for (const btn of filterButtons) {
     filterButtons.forEach(item => item.classList.toggle('active', item === btn));
     const filter = btn.dataset.filter || 'all';
     cards.forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
     });
   });
 }
@@ -92,15 +88,11 @@ if (fullscreenBtn && video) {
     if (!document.fullscreenElement) {
       try {
         await video.requestFullscreen();
-      } catch {
-        // fallback sem falha na UI
-      }
+      } catch {}
     } else {
       try {
         await document.exitFullscreen();
-      } catch {
-        // fallback sem falha na UI
-      }
+      } catch {}
     }
   });
 }
