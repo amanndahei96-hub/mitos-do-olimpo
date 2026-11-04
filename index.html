@@ -3,368 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Cosmogonia grega completa, a Linha do Tempo Mitológica desde o Caos primordial até os heróis homéricos, e a análise crítica das versões variantes dos mitos.">
-  <meta name="keywords" content="Cosmogonia Grega, Hesíodo, Teogonia, Titanomaquia, Prometeu, Linha do Tempo Mitológica, Héracles, Guerra de Troia">
-  <title>OLYMPUS — Cosmogonia, Grandes Mitos & Linha do Tempo</title>
-  
-  <!-- CSS Externo Master -->
+  <meta name="description" content="OLYMPUS: portal visual e interativo sobre os deuses, mitos e monumentos da Grécia antiga.">
+  <title>OLYMPUS — Mitologia Grega Clássica</title>
   <link rel="stylesheet" href="css/style.css">
-  
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/><polygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/></svg>">
 </head>
 <body>
-
-  <!-- Padrão Decorativo Helênico Superior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
-
-  <!-- Cabeçalho e Navegação Principal -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="OLYMPUS Mitologia Grega - Página Inicial">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.7L4.5 7.5 12 4l7.5 3.5L12 10.7zM2 17l10 5 10-5v-2l-10 5-10-5v2zm0-4l10 5 10-5v-2l-10 5-10-5v2z"/>
-        </svg>
-        <span>OLYMPUS</span>
-      </a>
-
-      <!-- Menu Principal entre todas as 4 páginas -->
-      <nav class="main-nav" aria-label="Navegação Principal do Portal">
+      <a href="index.html" class="brand-logo" aria-label="OLYMPUS - Início"><span>OLYMPUS</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Início</a></li>
+          <li><a href="index.html" class="nav-link active">Início</a></li>
           <li><a href="deuses.html" class="nav-link">Deuses & Mapa</a></li>
-          <li><a href="mitos.html" class="nav-link active">Mitos & Tempo</a></li>
+          <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
           <li><a href="video.html" class="nav-link">Vídeo</a></li>
         </ul>
-        
-        <button class="nav-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <button class="nav-toggle" type="button" aria-label="Abrir ou fechar menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    
-    <!-- Hero Secundário da Página de Mitos -->
-    <section class="section" style="padding-top: 3.5rem; padding-bottom: 2rem;">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-kicker">Da Origem do Cosmos aos Heróis Mortais</span>
-          <h1 class="section-title">Cosmogonia & Linha do Tempo</h1>
-          <p class="section-desc">
-            Compreenda a gênese do universo helênico, a sucessão geracional dos deuses e as narrativas épicas 
-            sem homogeneizar tradições poéticas distintas: a voz arcaica de Hesíodo, os cantos homéricos e as reinterpretações trágicas.
-          </p>
-        </header>
-      </div>
-    </section>
-
-    <!-- 1. A COSMOGONIA E COMPARAÇÃO DE TRADIÇÕES (CRITÉRIO A - CORRETUDE) -->
-    <section class="section section-alt" aria-labelledby="cosmogonia-heading">
-      <div class="container">
-        
-        <header class="section-header">
-          <span class="section-kicker">Gênese Comparada</span>
-          <h2 id="cosmogonia-heading" class="section-title">Como o Mundo Começou?</h2>
-          <p class="section-desc">
-            Diferentemente do pensamento monoteísta moderno de criação <em>ex nihilo</em> (do nada absoluto por um criador exterior), a cosmogonia grega é um processo orgânico de nascimento e diferenciação gradual.
-          </p>
-        </header>
-
-        <div class="artifact-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
-          
-          <article class="curiosity-card" style="border-top: 3px solid var(--gold-pure);">
-            <span class="curiosity-tag">Tradição Hegemônica</span>
-            <h3 style="color: var(--gold-light);">A Teogonia de Hesíodo</h3>
-            <p>
-              "No princípio de tudo era o <strong>Caos</strong> (o abismo desprovido de limites). Em seguida surgiu <strong>Gaia</strong> (a Terra firme de amplo seio), o tenebroso <strong>Tártaro</strong> (as entranhas sob a terra) e <strong>Eros</strong> (o Princípio de atração e fecundação cósmica)."
-            </p>
-            <p style="font-size: 0.88rem; color: var(--text-dim);">
-              Gaia concebe por si mesma Urano (o Céu estrelado) e com ele gera os doze Titãs, os três Ciclopes e os três Hecatônquiros (gigantes de cem braços). A história prossegue pela rebelião de Cronos e a vitória final de Zeus.
-            </p>
-          </article>
-
-          <article class="curiosity-card" style="border-top: 3px solid var(--sky-blue);">
-            <span class="curiosity-tag">Tradição Mistérica & Filosófica</span>
-            <h3 style="color: var(--sky-blue);">A Cosmogonia Órfica</h3>
-            <p>
-              Atribuída ao mítico cantor Orfeu, esta corrente esotérica afirmava que no começo existia <strong>Crono</strong> (o Tempo incorpóreo) e o <strong>Éter</strong>. No Éter, formou-se um imenso <strong>Ovo Cósmico Prateado</strong>.
-            </p>
-            <p style="font-size: 0.88rem; color: var(--text-dim);">
-              Da casca bipartida do Ovo Cósmico rompeu a divindade primordial andrógina <strong>Fanes</strong> (ou Protogonos, o Resplandecente com asas douradas), que engravidou a Si próprio e gerou todas as linhagens divinas, oferecendo uma visão cíclica e reencarnacionista da alma.
-            </p>
-          </article>
-
+    <section class="hero-section" style="background-image: linear-gradient(rgba(7,10,18,.35),rgba(7,10,18,.75)), url('assets/images/partenon.jpg');">
+      <div class="hero-overlay"></div>
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <span class="hero-sub-top">Mitologia Grega Clássica</span>
+        <h1 class="hero-title">OLYMPUS</h1>
+        <p class="hero-tagline">Entre no universo dos deuses, dos heróis e dos mitos que atravessaram os séculos.</p>
+        <div class="hero-actions">
+          <a href="deuses.html" class="btn btn-primary">Conheça os deuses</a>
+          <a href="mitos.html" class="btn btn-outline">Explore os mitos</a>
         </div>
-
       </div>
     </section>
 
-    <!-- 2. LINHA DO TEMPO MITOLÓGICA VISUAL E INTERATIVA (CRITÉRIO C.4) -->
-    <section class="section" aria-labelledby="timeline-heading">
+    <section class="section" aria-labelledby="intro-title">
       <div class="container">
-        
         <header class="section-header">
-          <span class="section-kicker">Cronologia Mítica Interativa</span>
-          <h2 id="timeline-heading" class="section-title">A Linha do Tempo dos Mitos</h2>
-          <p class="section-desc">
-            Percorra a sucessão cronológica dos eventos míticos. Clique em <strong>"Ver Fontes & Detalhes"</strong> para confrontar os textos antigos originais de cada episódio.
-          </p>
+          <span class="section-kicker">Um portal para a Grécia Antiga</span>
+          <h2 class="section-title" id="intro-title">Mitos que explicam o mundo</h2>
+          <p class="section-desc">Conheça as narrativas de origem, os deuses olímpicos e os heróis gregos por meio de conteúdo visual, interativo e organizado.</p>
         </header>
-
-        <div class="timeline-container">
-
-          <!-- Marco 1: Caos e Divindades Primordiais -->
-          <div class="timeline-item">
-            <div class="timeline-badge" title="Origem Cósmica" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-era">Era Primordial • Antes do Tempo</span>
-              <h3 class="timeline-title">1. O Caos & O Surgimento de Gaia</h3>
-              <p class="timeline-body">
-                Do vazio primordial emergem as forças elementares: a Terra (Gaia), a Noite (Nix), as Trevas abissais (Érebo) e o Amor cósmico (Eros). Gaia gera Urano (o Céu) para cobri-la inteiramente.
-              </p>
-              <button class="timeline-toggle-btn" aria-label="Expandir detalhes textuais da Era Primordial">
-                <span>✦ Ver Fontes & Detalhes ▾</span>
-              </button>
-              <div class="timeline-expandable">
-                <p><strong>Fonte Primária:</strong> Hesíodo, <em>Teogonia</em>, versos 116-133.</p>
-                <p><strong>Conceito Filosófico:</strong> <em>Khaos</em> para os gregos arcaicos não significava desordem confusa, mas "vazio aberto", uma fenda ou hiato onde as coisas podem passar a existir.</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Marco 2: O Reinado de Cronos e a Idade de Ouro -->
-          <div class="timeline-item">
-            <div class="timeline-badge" title="Era dos Titãs" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-era">Segunda Geração • A Foice de Diamante</span>
-              <h3 class="timeline-title">2. A Queda de Urano & O Governo de Cronos</h3>
-              <p class="timeline-body">
-                Sufocada pelos filhos retidos no ventre por Urano, Gaia forja uma foice de diamante (<em>adamás</em>) e incita os Titãs. O jovem Cronos decepa os genitais do pai, inaugurando a mítica Idade de Ouro.
-              </p>
-              <button class="timeline-toggle-btn" aria-label="Expandir detalhes sobre Cronos">
-                <span>✦ Ver Fontes & Detalhes ▾</span>
-              </button>
-              <div class="timeline-expandable">
-                <p><strong>Nascimento de Afrodite:</strong> Da espuma formada pelo esperma de Urano caído nas águas nasce Afrodite no litoral de Chipre e Citera (Hesíodo).</p>
-                <p><strong>O Terror da Profecia:</strong> Avisado de que seria destronado por um filho, Cronos passa a engolir os recém-nascidos gerados com Reia.</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Marco 3: A Titanomaquia -->
-          <div class="timeline-item">
-            <div class="timeline-badge" title="Guerra Cósmica" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-era">Terceira Geração • Conflito pelo Cosmos</span>
-              <h3 class="timeline-title">3. A Grande Titanomaquia (10 Anos de Guerra)</h3>
-              <p class="timeline-body">
-                Reia engana Cronos oferecendo-lhe uma pedra enrolada em panos (o <em>Ônfalo</em>) e esconde Zeus na Ilha de Creta. Ao crescer, Zeus faz o pai regurgitar os irmãos e declara guerra total aos Titãs.
-              </p>
-              <button class="timeline-toggle-btn" aria-label="Expandir detalhes da Titanomaquia">
-                <span>✦ Ver Fontes & Detalhes ▾</span>
-              </button>
-              <div class="timeline-expandable">
-                <p><strong>Aliança Decisiva:</strong> Zeus desce ao Tártaro e liberta os Ciclopes e os Hecatônquiros. Os Ciclopes presenteiam Zeus com o Raio fulminante, Posídon com o Tridente e Hades com o Elmo da Invisibilidade.</p>
-                <p><strong>Desfecho:</strong> Os Titãs derrotados são acorrentados no Tártaro, vigiados por muralhas triplas de bronze.</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Marco 4: A Criação do Homem e Prometeu -->
-          <div class="timeline-item">
-            <div class="timeline-badge" title="A Humanidade" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-era">A Antropogonia • O Fogo Divino</span>
-              <h3 class="timeline-title">4. Prometeu, O Fogo Sagrado & Pandora</h3>
-              <p class="timeline-body">
-                Prometeu molda a humanidade com argila e água e rouba o fogo celestial oculto num talo de férula para conferir a técnica e a sobrevivência aos mortais. Zeus pune o titã com o suplício da águia no Cáucaso.
-              </p>
-              <button class="timeline-toggle-btn" aria-label="Expandir detalhes sobre Prometeu e Pandora">
-                <span>✦ Ver Fontes & Detalhes ▾</span>
-              </button>
-              <div class="timeline-expandable">
-                <p><strong>A Jarra de Pandora:</strong> Como retaliação aos mortais, Hefesto e Atena criam a primeira mulher, Pandora. Ao destampar a grande jarra (<em>píthos</em>), espalham-se as doenças e aflições, restando no fundo apenas a Esperança (<em>Elpis</em>).</p>
-                <p><strong>Hesíodo vs Ésquilo:</strong> Para Hesíodo, Prometeu é um rebelde soberbo; para Ésquilo, é o benfeitor martirizado da razão humana.</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Marco 5: O Rapto de Perséfone e as Estações -->
-          <div class="timeline-item">
-            <div class="timeline-badge" title="Ciclo da Natureza" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-era">Ciclo Ctônico • O Ritmo da Terra</span>
-              <h3 class="timeline-title">5. O Rapto de Perséfone & As Quatro Estações</h3>
-              <p class="timeline-body">
-                Hades rapta Coré para as sombras subterrâneas com a anuência velada de Zeus. Deméter, inconsolável, recusa-se a fazer os grãos germinarem, ameaçando a terra com a fome universal.
-              </p>
-              <button class="timeline-toggle-btn" aria-label="Expandir detalhes sobre o ciclo de Perséfone">
-                <span>✦ Ver Fontes & Detalhes ▾</span>
-              </button>
-              <div class="timeline-expandable">
-                <p><strong>O Grão da Romã:</strong> Por ter ingerido sementes de romã no Submundo, Perséfone sela o pacto de retornar um terço do ano ao reino subterrâneo (Inverno) e passar os outros dois terços na superfície com a mãe (Primavera e Verão).</p>
-                <p><strong>Fonte:</strong> <em>Hino Homérico a Deméter</em> (séc. VII a.C.).</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Marco 6: Os Grandes Heróis e Monstros -->
-          <div class="timeline-item">
-            <div class="timeline-badge" title="Ciclo Heroico" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-era">A Idade dos Heróis • Semideuses</span>
-              <h3 class="timeline-title">6. Os Doze Trabalhos de Héracles & Monstros</h3>
-              <p class="timeline-body">
-                Os filhos de deuses com mortais enfrentam provações para limpar a terra de feras monstruosas e conquistar a imortalidade. Perseu decapita Medusa; Teseu vence o Minotauro no labirinto de Creta; Héracles cumpre seus 12 trabalhos.
-              </p>
-              <button class="timeline-toggle-btn" aria-label="Expandir detalhes dos heróis">
-                <span>✦ Ver Fontes & Detalhes ▾</span>
-              </button>
-              <div class="timeline-expandable">
-                <p><strong>O Sentido do Herói Grego:</strong> O herói helênico (<em>heros</em>) não é um santo moral perfeito, mas um ser dotado de <em>kleos</em> (fama imperecível) e <em>hubris</em> (descomedimento trágico que desafia os limites divinos).</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Marco 7: A Guerra de Troia -->
-          <div class="timeline-item">
-            <div class="timeline-badge" title="O Crepúsculo dos Heróis" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <span class="timeline-era">Clímax Épico • Fim da Idade Heroica</span>
-              <h3 class="timeline-title">7. A Guerra de Troia & O Retorno de Odisseu</h3>
-              <p class="timeline-body">
-                Após a discórdia da Maçã de Ouro e a fuga de Helena com Páris, as frotas aqueias cercam Troia durante dez anos. Com a queda da cidade pelas artimanhas do Cavalo de Madeira de Odisseu, encerra-se a era heroica.
-              </p>
-              <button class="timeline-toggle-btn" aria-label="Expandir detalhes homéricos">
-                <span>✦ Ver Fontes & Detalhes ▾</span>
-              </button>
-              <div class="timeline-expandable">
-                <p><strong>Fontes Canônicas:</strong> Homero, <em>Ilíada</em> (o canto da ira de Aquiles) e <em>Odisseia</em> (as errâncias marítimas de dez anos de Odisseu para retornar à ilha de Ítaca).</p>
-                <p><strong>Separação Definitiva:</strong> Após Troia, os deuses distanciam-se definitivamente do convívio direto com os mortais.</p>
-              </div>
-            </article>
-          </div>
-
+        <div class="artifact-grid">
+          <article class="curiosity-card"><span class="curiosity-tag">O COSMOS</span><h3>Da origem dos deuses</h3><p>Do Caos primordial à ascensão de Zeus: acompanhe as gerações divinas e a formação do universo mítico.</p><a class="btn btn-outline" href="mitos.html">Ver cosmogonia</a></article>
+          <article class="curiosity-card"><span class="curiosity-tag">O PANTEÃO</span><h3>Os deuses do Olimpo</h3><p>Explore os domínios, símbolos e histórias das principais divindades da tradição grega.</p><a class="btn btn-outline" href="deuses.html">Ver os deuses</a></article>
+          <article class="curiosity-card"><span class="curiosity-tag">A MEMÓRIA</span><h3>Heróis e grandes jornadas</h3><p>De Héracles a Odisseu, descubra os feitos, desafios e destinos dos heróis lendários.</p><a class="btn btn-outline" href="mitos.html#timeline-heading">Ver linha do tempo</a></article>
         </div>
-
       </div>
     </section>
 
-    <!-- 3. ANÁLISE CRÍTICA DE MITOS COM VERSÕES DIVERGENTES (CRITÉRIO A - CORRETUDE) -->
-    <section class="section section-alt" aria-labelledby="variantes-heading">
+    <section class="section section-alt" aria-labelledby="gallery-title">
       <div class="container">
-        
         <header class="section-header">
-          <span class="section-kicker">Filologia & Crítica das Tradições</span>
-          <h2 id="variantes-heading" class="section-title">Mitos e Suas Versões Concorrentes</h2>
-          <p class="section-desc">
-            Apresentação rigorosa das diferentes tradições literárias sem fundir épocas ou fontes incompatíveis.
-          </p>
+          <span class="section-kicker">Arte & Antiguidade</span>
+          <h2 class="section-title" id="gallery-title">Vestígios do mundo clássico</h2>
+          <p class="section-desc">Monumentos e esculturas aproximam a mitologia da história material da Grécia antiga.</p>
         </header>
-
-        <div class="artifact-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-          
-          <!-- Mito 1: Medusa -->
-          <article class="curiosity-card">
-            <span class="curiosity-tag">Variação Textual • Monstro vs Vítima</span>
-            <h3>O Mito de Medusa: Hesíodo vs Ovídio</h3>
-            <p>
-              <strong>Na tradição grega arcaica (Hesíodo, Teogonia):</strong> Medusa já nasceu monstro horrível das profundezas ctônicas, filha de Fórcis e Ceto, possuindo serpentes como cabelos e presas selvagens.
-            </p>
-            <p>
-              <strong>Na tradição romana tardia (Ovídio, Metamorfoses):</strong> Medusa era uma bela donzela mortal que foi violentada por Netuno (Posídon) no templo sagrado de Minerva (Atena), sendo em seguida amaldiçoada injustamente pela deusa irada.
-            </p>
-          </article>
-
-          <!-- Mito 2: O Destino de Helena -->
-          <article class="curiosity-card">
-            <span class="curiosity-tag">Variação Trágica • Realidade vs Fantasma</span>
-            <h3>Helena Real vs O Fantasma de Troia</h3>
-            <p>
-              <strong>Em Homero (Ilíada):</strong> Helena vive fisicamente dentro das muralhas de Troia com o príncipe Páris, acompanhando das muralhas os combates sangrentos.
-            </p>
-            <p>
-              <strong>Em Estesícoro e Eurípides (Helena):</strong> Os deuses enviaram a Troia apenas um fantasma ilusório de névoa (<em>eidôlon</em>); a Helena de carne e osso foi transportada intacta para o Egito, conservando sua fidelidade a Menelau.
-            </p>
-          </article>
-
-          <!-- Mito 3: O Roubo do Fogo -->
-          <article class="curiosity-card">
-            <span class="curiosity-tag">Perspectiva Ética • Trapaça vs Salvação</span>
-            <h3>Prometeu: Hesíodo vs Ésquilo</h3>
-            <p>
-              <strong>Em Hesíodo (Trabalhos e Dias):</strong> Prometeu é retratado criticamente como o causador do trabalho extenuante e da decadência dos mortais, pois sua audácia motivou Zeus a enviar Pandora com todos os males.
-            </p>
-            <p>
-              <strong>Em Ésquilo (Prometeu Acorrentado):</strong> Prometeu é celebrado como o mártir pioneiro da civilização, das ciências, da escrita, da navegação e da medicina, salvando os mortais da extinção cega.
-            </p>
-          </article>
-
+        <div class="artifact-grid">
+          <article class="artifact-card"><div class="artifact-img-wrap"><img src="assets/images/partenon.jpg" alt="Partenon de Atenas, templo de colunas dóricas sob o céu azul" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Acrópole de Atenas</span><h3>O Partenon</h3><p>Templo dedicado a Atena, símbolo da arquitetura e da memória cívica ateniense.</p></div></article>
+          <article class="artifact-card"><div class="artifact-img-wrap"><img src="assets/images/poseidon.jpg" alt="Escultura antiga de bronze de uma divindade grega com os braços estendidos" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Bronze grego antigo</span><h3>O deus do mar</h3><p>A famosa escultura de bronze é tradicionalmente identificada como Zeus ou Poseidon; a atribuição permanece discutida.</p></div></article>
+          <article class="artifact-card"><div class="artifact-img-wrap"><img src="assets/images/zeus.jpg" alt="Escultura clássica de mármore de uma figura masculina barbada" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Escultura clássica</span><h3>Zeus, senhor do Olimpo</h3><p>As esculturas antigas representavam os deuses com atributos e gestos que comunicavam sua autoridade divina.</p></div></article>
         </div>
-
+        <p class="table-scholarly-note"><strong>Nota:</strong> as imagens devem estar na pasta <code>assets/images/</code> com os nomes indicados. Os atalhos `.url` enviados apontam para o computador local e não contêm os arquivos de imagem.</p>
       </div>
     </section>
 
+    <section class="section" aria-labelledby="explore-title">
+      <div class="container">
+        <header class="section-header"><span class="section-kicker">Continue a jornada</span><h2 class="section-title" id="explore-title">Escolha seu caminho pelo Olimpo</h2></header>
+        <div class="guide-step-list">
+          <a class="guide-step-item" href="deuses.html"><span class="step-time">01 — PANTEÃO</span><h3 class="step-title">Deuses & Mapa</h3><p class="step-desc">Símbolos, domínios e genealogias dos deuses.</p></a>
+          <a class="guide-step-item" href="mitos.html"><span class="step-time">02 — NARRATIVAS</span><h3 class="step-title">Mitos & Tempo</h3><p class="step-desc">Cosmogonia, linha do tempo e versões míticas.</p></a>
+          <a class="guide-step-item" href="video.html"><span class="step-time">03 — MULTIMÍDIA</span><h3 class="step-title">Vídeo do projeto</h3><p class="step-desc">Assista à apresentação audiovisual do portal.</p></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Padrão Decorativo Helênico Inferior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
-
-  <!-- Rodapé Institucional Completo em Todas as Páginas (Critério B) -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        
-        <div class="footer-brand">
-          <h4>OLYMPUS</h4>
-          <p>
-            Portal acadêmico e interativo dedicado ao estudo e valorização da mitologia grega clássica, desenvolvido por <strong>Amanda e Bianca</strong> com base nas fontes arcaicas de Homero e Hesíodo e na historiografia de Junito Brandão e Pierre Grimal.
-          </p>
-          <div class="footer-quote">
-            "Canta-me, ó Musa, do homem de mil estratagemas que por tanto tempo errou, após destruir a cidadela sagrada de Troia." — Homero, Odisseia
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h5>Navegação</h5>
-          <ul class="footer-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="deuses.html">Os 12 Deuses & Mapa</a></li>
-            <li><a href="mitos.html">Mitos & Linha do Tempo</a></li>
-            <li><a href="video.html">Vídeo do Projeto</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Autoras & Projeto</h5>
-          <ul class="footer-links">
-            <li><a href="video.html#autoras-heading">Amanda — Web Design</a></li>
-            <li><a href="video.html#autoras-heading">Bianca — Audiovisual</a></li>
-            <li><a href="video.html#criterios">Referências Bibliográficas</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Fontes & Pesquisa</h5>
-          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">
-            Todas as passagens míticas acompanham suas respectivas fontes antigas para assegurar rigor acadêmico de referência.
-          </p>
-          <span class="badge">Mitologia Fundamentada</span>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega Clássica. Desenvolvido por <strong>Amanda e Bianca</strong>.</p>
-        <p>Desenvolvido com fidelidade historiográfica e rigor técnico.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Script JavaScript Master -->
+  <footer class="site-footer"><div class="container"><div class="footer-grid">
+    <div class="footer-brand"><h4>OLYMPUS</h4><p>Portal interativo dedicado à mitologia grega clássica, às suas fontes e à sua herança artística.</p><div class="footer-quote">“Canta-me, ó Musa...” — Homero, <em>Odisseia</em></div></div>
+    <div class="footer-col"><h5>Navegação</h5><ul class="footer-links"><li><a href="index.html">Início</a></li><li><a href="deuses.html">Deuses & Mapa</a></li><li><a href="mitos.html">Mitos & Tempo</a></li><li><a href="video.html">Vídeo</a></li></ul></div>
+    <div class="footer-col"><h5>Projeto</h5><ul class="footer-links"><li><a href="video.html#autoras-heading">Amanda & Bianca</a></li><li><a href="video.html#criterios">Referências</a></li></ul></div>
+    <div class="footer-col"><h5>Pesquisa</h5><p>Conteúdo inspirado nas tradições de Homero, Hesíodo e outros autores clássicos.</p><span class="badge">Mitologia Fundamentada</span></div>
+  </div><div class="footer-bottom"><p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega.</p><p>Web design & multimídia.</p></div></div></footer>
   <script src="js/main.js"></script>
 </body>
 </html>
