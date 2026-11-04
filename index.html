@@ -9,79 +9,40 @@
 </head>
 <body>
   <div class="greek-border-pattern" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="OLYMPUS - Início"><span>OLYMPUS</span></a>
-      <nav class="main-nav" aria-label="Navegação principal">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link active">Início</a></li>
-          <li><a href="deuses.html" class="nav-link">Deuses & Mapa</a></li>
-          <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
-          <li><a href="video.html" class="nav-link">Vídeo</a></li>
-        </ul>
-        <button class="nav-toggle" type="button" aria-label="Abrir ou fechar menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      </nav>
-    </div>
-  </header>
-
+  <header class="site-header"><div class="container nav-container">
+    <a href="index.html" class="brand-logo" aria-label="OLYMPUS - início"><span>OLYMPUS</span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><ul class="nav-list">
+      <li><a href="index.html" class="nav-link active" aria-current="page">Início</a></li><li><a href="deuses.html" class="nav-link">Deuses & Mapa</a></li><li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li><li><a href="video.html" class="nav-link">Vídeo</a></li>
+    </ul><button class="nav-toggle" type="button" aria-label="Abrir ou fechar menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+  </div></header>
   <main id="main-content">
-    <section class="hero-section" style="background-image: linear-gradient(rgba(7,10,18,.35),rgba(7,10,18,.75)), url('assets/images/partenon.jpg');">
-      <div class="hero-overlay"></div>
-      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
-      <div class="hero-content">
-        <span class="hero-sub-top">Mitologia Grega Clássica</span>
-        <h1 class="hero-title">OLYMPUS</h1>
-        <p class="hero-tagline">Entre no universo dos deuses, dos heróis e dos mitos que atravessaram os séculos.</p>
-        <div class="hero-actions">
-          <a href="deuses.html" class="btn btn-primary">Conheça os deuses</a>
-          <a href="mitos.html" class="btn btn-outline">Explore os mitos</a>
-        </div>
-      </div>
+    <section class="hero-section" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon%20from%20west%20at%20evening.jpg');">
+      <div class="hero-overlay"></div><canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-content"><span class="hero-sub-top">Mitologia Grega Clássica</span><h1 class="hero-title">OLYMPUS</h1><p class="hero-tagline">Entre no universo dos deuses, dos heróis e dos mitos que atravessaram os séculos.</p><div class="hero-actions"><a href="deuses.html" class="btn btn-primary">Conheça os deuses</a><a href="mitos.html" class="btn btn-outline">Explore os mitos</a></div></div>
     </section>
-
-    <section class="section" aria-labelledby="intro-title">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-kicker">Um portal para a Grécia Antiga</span>
-          <h2 class="section-title" id="intro-title">Mitos que explicam o mundo</h2>
-          <p class="section-desc">Conheça as narrativas de origem, os deuses olímpicos e os heróis gregos por meio de conteúdo visual, interativo e organizado.</p>
-        </header>
-        <div class="artifact-grid">
-          <article class="curiosity-card"><span class="curiosity-tag">O COSMOS</span><h3>Da origem dos deuses</h3><p>Do Caos primordial à ascensão de Zeus: acompanhe as gerações divinas e a formação do universo mítico.</p><a class="btn btn-outline" href="mitos.html">Ver cosmogonia</a></article>
-          <article class="curiosity-card"><span class="curiosity-tag">O PANTEÃO</span><h3>Os deuses do Olimpo</h3><p>Explore os domínios, símbolos e histórias das principais divindades da tradição grega.</p><a class="btn btn-outline" href="deuses.html">Ver os deuses</a></article>
-          <article class="curiosity-card"><span class="curiosity-tag">A MEMÓRIA</span><h3>Heróis e grandes jornadas</h3><p>De Héracles a Odisseu, descubra os feitos, desafios e destinos dos heróis lendários.</p><a class="btn btn-outline" href="mitos.html#timeline-heading">Ver linha do tempo</a></article>
-        </div>
+    <section class="section" aria-labelledby="intro-title"><div class="container">
+      <header class="section-header"><span class="section-kicker">Um portal para a Grécia Antiga</span><h2 class="section-title" id="intro-title">Mitos que explicam o mundo</h2><p class="section-desc">Conheça as narrativas de origem, os deuses olímpicos e os heróis gregos por meio de conteúdo visual, interativo e organizado.</p></header>
+      <div class="artifact-grid">
+        <article class="curiosity-card"><span class="curiosity-tag">O COSMOS</span><h3>Da origem dos deuses</h3><p>Do Caos primordial à ascensão de Zeus: acompanhe as gerações divinas e a formação do universo mítico.</p><a class="btn btn-outline" href="mitos.html">Ver cosmogonia</a></article>
+        <article class="curiosity-card"><span class="curiosity-tag">O PANTEÃO</span><h3>Os deuses do Olimpo</h3><p>Explore os domínios, símbolos e histórias das principais divindades da tradição grega.</p><a class="btn btn-outline" href="deuses.html">Ver os deuses</a></article>
+        <article class="curiosity-card"><span class="curiosity-tag">A MEMÓRIA</span><h3>Heróis e grandes jornadas</h3><p>De Héracles a Odisseu, descubra os feitos, desafios e destinos dos heróis lendários.</p><a class="btn btn-outline" href="mitos.html#timeline-heading">Ver linha do tempo</a></article>
       </div>
-    </section>
-
-    <section class="section section-alt" aria-labelledby="gallery-title">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-kicker">Arte & Antiguidade</span>
-          <h2 class="section-title" id="gallery-title">Vestígios do mundo clássico</h2>
-          <p class="section-desc">Monumentos e esculturas aproximam a mitologia da história material da Grécia antiga.</p>
-        </header>
-        <div class="artifact-grid">
-          <article class="artifact-card"><div class="artifact-img-wrap"><img src="assets/images/partenon.jpg" alt="Partenon de Atenas, templo de colunas dóricas sob o céu azul" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Acrópole de Atenas</span><h3>O Partenon</h3><p>Templo dedicado a Atena, símbolo da arquitetura e da memória cívica ateniense.</p></div></article>
-          <article class="artifact-card"><div class="artifact-img-wrap"><img src="assets/images/poseidon.jpg" alt="Escultura antiga de bronze de uma divindade grega com os braços estendidos" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Bronze grego antigo</span><h3>O deus do mar</h3><p>A famosa escultura de bronze é tradicionalmente identificada como Zeus ou Poseidon; a atribuição permanece discutida.</p></div></article>
-          <article class="artifact-card"><div class="artifact-img-wrap"><img src="assets/images/zeus.jpg" alt="Escultura clássica de mármore de uma figura masculina barbada" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Escultura clássica</span><h3>Zeus, senhor do Olimpo</h3><p>As esculturas antigas representavam os deuses com atributos e gestos que comunicavam sua autoridade divina.</p></div></article>
-        </div>
-        <p class="table-scholarly-note"><strong>Nota:</strong> as imagens devem estar na pasta <code>assets/images/</code> com os nomes indicados. Os atalhos `.url` enviados apontam para o computador local e não contêm os arquivos de imagem.</p>
+    </div></section>
+    <section class="section section-alt" aria-labelledby="gallery-title"><div class="container">
+      <header class="section-header"><span class="section-kicker">Arte & Antiguidade</span><h2 class="section-title" id="gallery-title">Vestígios do mundo clássico</h2><p class="section-desc">Monumentos e esculturas aproximam a mitologia da história material da Grécia antiga.</p></header>
+      <div class="artifact-grid">
+        <article class="artifact-card"><div class="artifact-img-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon%20from%20west%20at%20evening.jpg" alt="Partenon de Atenas, templo de colunas dóricas sob o céu azul" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Acrópole de Atenas</span><h3>O Partenon</h3><p>Templo dedicado a Atena, símbolo da arquitetura e da memória cívica ateniense.</p></div></article>
+        <article class="artifact-card"><div class="artifact-img-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Artemision%20Zeus%20or%20Poseidon%20-%2020190926123149.jpg" alt="Bronze de Artemísio, escultura masculina com os braços estendidos" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Bronze de Artemísio</span><h3>Zeus ou Poseidon?</h3><p>A identidade da figura é debatida: sem o atributo que segurava, pode representar Zeus lançando um raio ou Poseidon com o tridente.</p></div></article>
+        <article class="artifact-card"><div class="artifact-img-wrap"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Zeus%2C%20Otricoli%2C%20Vatican%20Museums%20(5443496630).jpg" alt="Escultura clássica de mármore representando Zeus" loading="lazy"></div><div class="artifact-content"><span class="artifact-origin">Zeus de Otricoli</span><h3>O senhor do Olimpo</h3><p>Rosto barbado e expressão majestosa: a escultura traduz a autoridade divina na tradição clássica.</p></div></article>
       </div>
-    </section>
-
-    <section class="section" aria-labelledby="explore-title">
-      <div class="container">
-        <header class="section-header"><span class="section-kicker">Continue a jornada</span><h2 class="section-title" id="explore-title">Escolha seu caminho pelo Olimpo</h2></header>
-        <div class="guide-step-list">
-          <a class="guide-step-item" href="deuses.html"><span class="step-time">01 — PANTEÃO</span><h3 class="step-title">Deuses & Mapa</h3><p class="step-desc">Símbolos, domínios e genealogias dos deuses.</p></a>
-          <a class="guide-step-item" href="mitos.html"><span class="step-time">02 — NARRATIVAS</span><h3 class="step-title">Mitos & Tempo</h3><p class="step-desc">Cosmogonia, linha do tempo e versões míticas.</p></a>
-          <a class="guide-step-item" href="video.html"><span class="step-time">03 — MULTIMÍDIA</span><h3 class="step-title">Vídeo do projeto</h3><p class="step-desc">Assista à apresentação audiovisual do portal.</p></a>
-        </div>
-      </div>
-    </section>
+      <p class="table-scholarly-note"><strong>Créditos das imagens:</strong> arquivos disponibilizados pelo Wikimedia Commons; os nomes e as licenças de cada obra podem ser consultados na página do respectivo arquivo. As imagens dos atalhos `.url` locais não foram anexadas ao repositório, por isso o site usa imagens públicas equivalentes.</p>
+    </div></section>
+    <section class="section" aria-labelledby="explore-title"><div class="container"><header class="section-header"><span class="section-kicker">Continue a jornada</span><h2 class="section-title" id="explore-title">Escolha seu caminho pelo Olimpo</h2></header><ul class="guide-step-list">
+      <li><a class="guide-step-item" href="deuses.html"><span class="step-time">01 — PANTEÃO</span><h3 class="step-title">Deuses & Mapa</h3><p class="step-desc">Símbolos, domínios e genealogias dos deuses.</p></a></li>
+      <li><a class="guide-step-item" href="mitos.html"><span class="step-time">02 — NARRATIVAS</span><h3 class="step-title">Mitos & Tempo</h3><p class="step-desc">Cosmogonia, linha do tempo e versões míticas.</p></a></li>
+      <li><a class="guide-step-item" href="video.html"><span class="step-time">03 — MULTIMÍDIA</span><h3 class="step-title">Vídeo do projeto</h3><p class="step-desc">Assista à apresentação audiovisual do portal.</p></a></li>
+    </ul></div></section>
   </main>
-
   <div class="greek-border-pattern" aria-hidden="true"></div>
   <footer class="site-footer"><div class="container"><div class="footer-grid">
     <div class="footer-brand"><h4>OLYMPUS</h4><p>Portal interativo dedicado à mitologia grega clássica, às suas fontes e à sua herança artística.</p><div class="footer-quote">“Canta-me, ó Musa...” — Homero, <em>Odisseia</em></div></div>
