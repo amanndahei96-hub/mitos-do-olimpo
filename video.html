@@ -4,11 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Vídeo do projeto OLYMPUS sobre mitologia grega.">
-  <meta name="keywords" content="Vídeo Mitologia Grega, OLYMPUS, Deuses Gregos, Web Design">
+  <meta name="keywords" content="OLYMPUS, Mitologia Grega, Deuses Gregos, Vídeo">
+
   <title>OLYMPUS — Vídeo do Projeto</title>
 
   <link rel="stylesheet" href="css/style.css">
+
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/><polygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/></svg>">
 
   <style>
@@ -19,13 +22,15 @@
       border: 2px solid #d4af37;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.8), 0 0 25px rgba(212,175,55,0.25);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.8),
+                  0 0 25px rgba(212,175,55,0.25);
     }
 
     .video-player-wrap {
       background: #000;
       position: relative;
-      min-height: 380px;
+      width: 100%;
+      min-height: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -81,13 +86,44 @@
       text-align: center;
     }
 
+    .references-box {
+      background: var(--bg-card, #0e1424);
+      border: 1px solid var(--border-gold, rgba(212,175,55,0.3));
+      border-radius: 12px;
+      padding: 2.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .references-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .references-list li {
+      border-left: 3px solid #d4af37;
+      padding-left: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .references-list strong {
+      color: #f3e5ab;
+    }
+
     @media (max-width: 600px) {
       .video-player-wrap {
-        min-height: 200px;
+        min-height: 180px;
       }
 
       .video-controls-panel {
         padding: 1rem;
+      }
+
+      .references-box {
+        padding: 1.2rem;
       }
     }
   </style>
@@ -97,10 +133,11 @@
 
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
+  <!-- CABEÇALHO -->
   <header class="site-header">
     <div class="container nav-container">
 
-      <a href="index.html" class="brand-logo" aria-label="OLYMPUS Mitologia Grega - Página Inicial">
+      <a href="index.html" class="brand-logo" aria-label="OLYMPUS - Página Inicial">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.7L4.5 7.5 12 4l7.5 3.5L12 10.7zM2 17l10 5 10-5v-2l-10 5-10-5v2zm0-4l10 5 10-5v-2l-10 5-10-5v2z"/>
         </svg>
@@ -125,6 +162,7 @@
     </div>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main id="main-content">
 
     <section class="section video-hero-section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
@@ -136,14 +174,17 @@
           <h1 class="section-title">Apresentação do Projeto</h1>
 
           <p class="section-desc">
-            Conheça um pouco mais sobre a mitologia grega por meio
-            desta apresentação audiovisual do projeto OLYMPUS.
+            Uma apresentação audiovisual dedicada à mitologia grega,
+            seus deuses, suas histórias e seus principais elementos.
+            Explore o universo da Grécia Antiga por meio deste vídeo.
           </p>
         </header>
 
+        <!-- PLAYER DE VÍDEO -->
         <div class="video-container-box">
 
           <div class="video-player-wrap">
+
             <video
               id="projectVideo"
               class="main-video"
@@ -151,107 +192,132 @@
               preload="metadata"
               playsinline
             >
-              <source src="WhatsApp%20Video%202026-11-10%20at%2020.35.36%20(1).mp4" type="video/mp4">
+              <source
+                src="WhatsApp%20Video%202026-11-10%20at%2020.35.36%20%281%29.mp4"
+                type="video/mp4"
+              >
+
               Seu navegador não suporta a reprodução de vídeos HTML5.
             </video>
+
           </div>
 
+          <!-- AVISO CASO O VÍDEO NÃO CARREGUE -->
           <div id="videoFallbackNotice" class="video-fallback-box">
-            <p style="color: #f3e5ab; font-size: 0.95rem; margin-bottom: 0.8rem; font-weight: 500;">
+
+            <p style="color: #f3e5ab; font-size: 0.95rem; margin-bottom: 0.8rem;">
               Não foi possível carregar o vídeo automaticamente.
-              Você pode selecioná-lo no seu computador.
+              Você pode selecioná-lo diretamente no seu computador.
             </p>
 
-            <label for="directVideoPicker" class="btn-action-tool" style="cursor: pointer; font-size: 0.95rem; padding: 0.6rem 1.4rem;">
-              📁 Selecionar vídeo
+            <label for="directVideoPicker" class="btn-action-tool">
+              📁 Selecionar vídeo do computador
             </label>
+
           </div>
 
+          <!-- CONTROLES -->
           <div class="video-controls-panel">
 
             <div style="display: flex; align-items: center; gap: 0.6rem;">
-              <span id="videoStatusDot" style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 10px #22c55e; display: inline-block;"></span>
+
+              <span
+                id="videoStatusDot"
+                style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e; display: inline-block;"
+              ></span>
 
               <span id="videoStatusLabel" style="font-size: 0.88rem; color: #f3e5ab;">
                 Vídeo do Projeto OLYMPUS
               </span>
+
             </div>
 
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
 
-              <button type="button" id="btnCustomFullscreen" class="btn-action-tool" title="Tela cheia">
+              <button
+                type="button"
+                id="btnCustomFullscreen"
+                class="btn-action-tool"
+                title="Abrir vídeo em tela cheia"
+              >
                 ⛶ Tela Cheia
               </button>
 
               <a
-                href="WhatsApp%20Video%202026-11-10%20at%2020.35.36%20(1).mp4"
+                href="WhatsApp%20Video%202026-11-10%20at%2020.35.36%20%281%29.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn-action-tool"
-                title="Abrir vídeo em nova aba"
               >
                 ▶ Abrir Vídeo
               </a>
 
-              <label for="directVideoPicker" class="btn-action-tool" title="Escolher vídeo do computador" style="cursor: pointer;">
+              <label for="directVideoPicker" class="btn-action-tool" style="cursor: pointer;">
                 📁 Escolher Vídeo
               </label>
 
-              <input type="file" id="directVideoPicker" accept="video/mp4,video/*" style="display: none;">
+              <input
+                type="file"
+                id="directVideoPicker"
+                accept="video/mp4,video/*"
+                style="display: none;"
+              >
 
             </div>
           </div>
 
         </div>
 
+        <!-- REFERÊNCIAS BIBLIOGRÁFICAS -->
         <header id="criterios" class="section-header">
           <span class="section-kicker">Rigor Historiográfico & ABNT</span>
 
           <h2 class="section-title">Fontes de Pesquisa e Referências</h2>
 
           <p class="section-desc">
-            Fundamentação teórica clássica e contemporânea utilizada
-            na construção do conteúdo do projeto.
+            Referências bibliográficas utilizadas como base para
+            o estudo da mitologia grega e a elaboração do conteúdo.
           </p>
         </header>
 
-        <div style="background: var(--bg-card, #0e1424); border: 1px solid var(--border-gold, rgba(212,175,55,0.3)); border-radius: 12px; padding: 2.2rem; margin-bottom: 3rem;">
+        <div class="references-box">
 
-          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+          <ul class="references-list">
 
-            <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">HESÍODO.</strong>
+            <li>
+              <strong>HESÍODO.</strong>
               <em>Teogonia: A Origem dos Deuses</em>.
               Tradução, introdução e notas de Jaa Torrano.
               7. ed. São Paulo: Iluminura, 2013.
             </li>
 
-            <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">HOMERO.</strong>
+            <li>
+              <strong>HOMERO.</strong>
               <em>Ilíada</em> &amp; <em>Odisseia</em>.
               Tradução em versos por Carlos Alberto Nunes.
               Rio de Janeiro: Ediouro / Nova Fronteira, 2015.
             </li>
 
-            <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">VERNANT, Jean-Pierre.</strong>
+            <li>
+              <strong>VERNANT, Jean-Pierre.</strong>
               <em>Mito e Pensamento entre os Gregos</em>.
               Rio de Janeiro: Paz e Terra, 2008.
             </li>
 
-            <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">GRIMAL, Pierre.</strong>
+            <li>
+              <strong>GRIMAL, Pierre.</strong>
               <em>Dicionário da Mitologia Grega e Romana</em>.
               5. ed. Rio de Janeiro: Bertrand Brasil, 2005.
             </li>
 
-            <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">BRANDÃO, Junito de Souza.</strong>
+            <li>
+              <strong>BRANDÃO, Junito de Souza.</strong>
               <em>Mitologia Grega</em>.
               Volumes I, II e III. Petrópolis: Vozes, 2012.
             </li>
 
           </ul>
+
         </div>
 
       </div>
@@ -259,14 +325,18 @@
 
   </main>
 
+  <!-- BORDA INFERIOR -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
+  <!-- RODAPÉ -->
   <footer class="site-footer">
     <div class="container">
+
       <div class="footer-grid">
 
         <div class="footer-brand">
           <h4>OLYMPUS</h4>
+
           <p>
             Portal acadêmico e interativo dedicado ao estudo
             e à valorização da mitologia grega clássica.
@@ -281,6 +351,7 @@
 
         <div class="footer-col">
           <h5>Navegação</h5>
+
           <ul class="footer-links">
             <li><a href="index.html">Início</a></li>
             <li><a href="deuses.html">Os 12 Deuses & Mapa</a></li>
@@ -291,10 +362,12 @@
 
         <div class="footer-col">
           <h5>Fontes & Pesquisa</h5>
+
           <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">
             Conteúdo baseado em fontes históricas e referências
             bibliográficas sobre a mitologia grega.
           </p>
+
           <span class="badge">Projeto Web Design & Multimídia</span>
         </div>
 
@@ -304,91 +377,90 @@
         <p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega Clássica.</p>
         <p>Desenvolvido com fidelidade historiográfica e rigor técnico.</p>
       </div>
+
     </div>
   </footer>
 
+  <!-- JAVASCRIPT -->
   <script src="js/main.js"></script>
 
   <script>
     (function() {
-      const vid = document.getElementById('projectVideo');
-      const fallbackNotice = document.getElementById('videoFallbackNotice');
+
+      const video = document.getElementById('projectVideo');
+      const fallback = document.getElementById('videoFallbackNotice');
       const picker = document.getElementById('directVideoPicker');
       const statusLabel = document.getElementById('videoStatusLabel');
       const statusDot = document.getElementById('videoStatusDot');
-      const btnFs = document.getElementById('btnCustomFullscreen');
+      const fullscreenButton = document.getElementById('btnCustomFullscreen');
 
-      if (!vid) return;
+      if (!video) return;
 
-      vid.addEventListener('error', function() {
-        if (fallbackNotice) {
-          fallbackNotice.style.display = 'block';
-        }
+      // Verifica se o vídeo carregou corretamente
+      video.addEventListener('loadeddata', function() {
 
-        if (statusDot) {
-          statusDot.style.background = '#eab308';
-          statusDot.style.boxShadow = '0 0 10px #eab308';
-        }
+        fallback.style.display = 'none';
 
-        if (statusLabel) {
-          statusLabel.textContent = 'Não foi possível carregar o vídeo.';
-        }
+        statusLabel.textContent = 'Vídeo carregado com sucesso!';
+
+        statusDot.style.background = '#22c55e';
+        statusDot.style.boxShadow = '0 0 10px #22c55e';
+
       });
 
-      vid.addEventListener('loadeddata', function() {
-        if (fallbackNotice) {
-          fallbackNotice.style.display = 'none';
-        }
+      // Mostra uma alternativa se o arquivo não for encontrado
+      video.addEventListener('error', function() {
 
-        if (statusDot) {
-          statusDot.style.background = '#22c55e';
-          statusDot.style.boxShadow = '0 0 10px #22c55e';
-        }
+        fallback.style.display = 'block';
 
-        if (statusLabel) {
-          statusLabel.textContent = 'Vídeo carregado com sucesso!';
-        }
+        statusLabel.textContent = 'Não foi possível carregar o vídeo.';
+
+        statusDot.style.background = '#eab308';
+        statusDot.style.boxShadow = '0 0 10px #eab308';
+
       });
 
-      if (picker) {
-        picker.addEventListener('change', function(e) {
-          const file = e.target.files[0];
+      // Permite selecionar um vídeo diretamente do computador
+      picker.addEventListener('change', function(event) {
 
-          if (file) {
-            vid.src = URL.createObjectURL(file);
-            vid.load();
+        const file = event.target.files[0];
 
-            vid.play().catch(function() {});
+        if (!file) return;
 
-            if (fallbackNotice) {
-              fallbackNotice.style.display = 'none';
-            }
+        const temporaryUrl = URL.createObjectURL(file);
 
-            if (statusLabel) {
-              statusLabel.textContent = 'Vídeo selecionado: ' + file.name;
-            }
+        video.src = temporaryUrl;
+        video.load();
 
-            if (statusDot) {
-              statusDot.style.background = '#22c55e';
-              statusDot.style.boxShadow = '0 0 10px #22c55e';
-            }
+        video.play().catch(function() {});
+
+        fallback.style.display = 'none';
+
+        statusLabel.textContent = 'Vídeo selecionado: ' + file.name;
+
+        statusDot.style.background = '#22c55e';
+        statusDot.style.boxShadow = '0 0 10px #22c55e';
+
+      });
+
+      // Tela cheia
+      fullscreenButton.addEventListener('click', function() {
+
+        if (!document.fullscreenElement) {
+
+          if (video.requestFullscreen) {
+            video.requestFullscreen();
           }
-        });
-      }
 
-      if (btnFs) {
-        btnFs.addEventListener('click', function() {
-          if (!document.fullscreenElement) {
-            if (vid.requestFullscreen) {
-              vid.requestFullscreen();
-            }
-          } else {
-            if (document.exitFullscreen) {
-              document.exitFullscreen();
-            }
+        } else {
+
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
           }
-        });
-      }
+
+        }
+
+      });
 
     })();
   </script>
