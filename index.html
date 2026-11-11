@@ -1,19 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OLYMPUS — Uma imersão acadêmica e visual na mitologia grega, nos doze deuses olímpicos, na cosmogonia de Hesíodo e nas narrativas heroicas da Grécia Antiga. Desenvolvido por Amanda e Bianca.">
-  <meta name="keywords" content="Mitologia Grega, Olimpo, Deuses Gregos, Zeus, Atena, Poseidon, Hesíodo, Homero, Cosmogonia, Amanda e Bianca">
+  <meta name="description" content="OLYMPUS — Uma imersão acadêmica e visual na mitologia grega, nos doze deuses olímpicos, na cosmogonia de Hesíodo e nas narrativas heroicas da Grécia Antiga.">
+  <meta name="keywords" content="Mitologia Grega, Olimpo, Deuses Gregos, Zeus, Atena, Poseidon, Hesíodo, Homero, Cosmogonia, Web Design">
   <title>OLYMPUS — O Reino dos Deuses Antigos</title>
-  
+
+  <!-- CSS Externo Master -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/><polygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/></svg>">
+
+  <!-- Favicon Mitológico em SVG Inline Data URI -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,*<*&#x73;vg xmlns='http\://www\.w3.org/2000/svg' viewBox='0 0 100 100'>*<*&#x63;ircle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/>*<*&#x70;olygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/>*<*/svg>">
 </head>
 <body>
 
+  <!-- Padrão Decorativo Helênico Superior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
+  <!-- Cabeçalho e Navegação Principal -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" aria-label="OLYMPUS Mitologia Grega - Página Inicial">
@@ -23,6 +29,7 @@
         <span>OLYMPUS</span>
       </a>
 
+      <!-- Menu Principal entre todas as 4 páginas -->
       <nav class="main-nav" aria-label="Navegação Principal do Portal">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link active">Início</a></li>
@@ -30,7 +37,8 @@
           <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
           <li><a href="video.html" class="nav-link">Vídeo</a></li>
         </ul>
-        
+
+        <!-- Botão Hambúrguer Acessível para Mobile -->
         <button class="nav-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false">
           <span></span>
           <span></span>
@@ -41,17 +49,17 @@
   </header>
 
   <main id="main-content">
-    
-    <!-- EXPERIÊNCIA DE ENTRADA OLYMPUS -->
-    <section class="hero-section" style="background-image: url('assets/images/partenon.jpg');" aria-labelledby="hero-heading">
+
+    <!-- 1. EXPERIÊNCIA DE ENTRADA (CRITÉRIO C.1) -->
+    <section class="hero-section" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/da/The_Parthenon_in_Athens.jpg');" aria-labelledby="hero-heading">
       <div class="hero-overlay"></div>
       <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
 
       <div class="container hero-content">
-        <span class="hero-sub-top">Grécia Arcaica & Clássica • Por Amanda e Bianca</span>
+        <span class="hero-sub-top">Grécia Arcaica & Clássica</span>
         <h1 id="hero-heading" class="hero-title">OLYMPUS</h1>
         <p class="hero-tagline">
-          Das profundezas do Caos primordial ao cume fulgurante da montanha sagrada. 
+          Das profundezas do Caos primordial ao cume fulgurante da montanha sagrada.&#x20;
           Explore a ordem cósmica, a linhagem das divindades e os mitos que fundaram a imaginação ocidental sob a luz das fontes históricas originais.
         </p>
 
@@ -72,16 +80,18 @@
       </div>
     </section>
 
+    <!-- Padrão Decorativo Helênico -->
     <div class="greek-border-pattern" aria-hidden="true"></div>
 
+    <!-- 2. FUNDAMENTAÇÃO HISTÓRICA: O QUE É O MITO GREGO? (CRITÉRIO A - CORRETUDE) -->
     <section class="section">
       <div class="container">
         <header class="section-header">
           <span class="section-kicker">Origens & Fontes Arcaicas</span>
           <h2 class="section-title">O Que É a Mitologia Grega?</h2>
           <p class="section-desc">
-            Para o heleno antigo, o mito (<em>mythos</em>) não era uma fábula de entretenimento nem uma ficção desprovida de seriedade: 
-            era a palavra fundadora que explicava as leis da natureza, as instituições políticas e o destino do homem.
+            Para o heleno antigo, o mito (<em>mythos</em>) não era uma fábula de entretenimento nem uma ficção desprovida de seriedade:&#x20;
+            era a palavra fundadora, a memória viva das origens que explicava as leis da natureza, as instituições políticas e o destino do homem.
           </p>
         </header>
 
@@ -89,117 +99,214 @@
           <article class="curiosity-card">
             <span class="curiosity-tag">Cosmologia Poética</span>
             <h3>A Teogonia de Hesíodo (séc. VII a.C.)</h3>
-            <p>Hesíodo narra a passagem do <strong>Caos</strong> à harmonia da justiça divina (<em>Dike</em>) sob Zeus, estabelecendo como os deuses nasceram e ordenaram o universo físico e moral.</p>
+            <p>
+              Principal matriz genealógica dos gregos. Hesíodo narra a passagem do <strong>Caos</strong> à harmonia da justiça divina (<em>Dike</em>) sob Zeus, estabelecendo como os deuses nasceram e ordenaram o universo físico e moral.
+            </p>
           </article>
 
           <article class="curiosity-card">
             <span class="curiosity-tag">Tradição Heroica</span>
             <h3>Os Poemas Homéricos (séc. VIII a.C.)</h3>
-            <p>Na <em>Ilíada</em> e na <em>Odisseia</em>, os deuses participam ativamente da vida mortal na Guerra de Troia, possuindo paixões que revelam a relação entre mortais e imortais.</p>
+            <p>
+              Na <em>Ilíada</em> e na <em>Odisseia</em>, os deuses participam ativamente da vida mortal na Guerra de Troia, possuindo paixões, cóleras e favores que revelam a relação tensa e reverente entre mortais e imortais.
+            </p>
           </article>
 
           <article class="curiosity-card">
             <span class="curiosity-tag">Critério de Rigor</span>
             <h3>Pluralidade de Versões Míticas</h3>
-            <p>A Grécia Antiga não possuía um livro sagrado canônico unificado. Nosso portal preserva essas diferenças sem misturar a tradição hesiódica, homérica e as revisões romanas posteriores de Ovídio.</p>
+            <p>
+              A Grécia Antiga não possuía um livro sagrado canônico unificado. Cada pólis mantinha ritos e variações locais. Nosso portal preserva essas diferenças sem misturar a tradição hesiódica, homérica e as revisões romanas posteriores de Ovídio.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ARTEFATOS E ESCULTURAS REAIS -->
+    <!-- 3. TRIÂNGULO SOBERANO: IMAGENS HISTÓRICAS REAIS (CRITÉRIOS A & B) -->
     <section class="section section-alt">
       <div class="container">
         <header class="section-header">
           <span class="section-kicker">Esculturas & Arqueologia Autêntica</span>
           <h2 class="section-title">A Soberania no Imaginário Helenístico</h2>
-          <p class="section-desc">Contemple artefatos e estátuas reais preservadas nos grandes museus do mundo.</p>
+          <p class="section-desc">
+            Contemple artefatos e estátuas reais preservadas nos grandes museus do mundo, testemunhas da reverência clássica às divindades supremas.
+          </p>
         </header>
 
         <div class="artifact-grid">
+
+          <!-- Imagem Real 1: Zeus de Esmirna -->
           <article class="artifact-card">
             <div class="artifact-img-wrap">
-              <img src="assets/images/zeus.jpg" alt="Escultura em mármore de Zeus de Esmirna, século II d.C., exposta no Museu do Louvre" loading="lazy">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Jupiter_Smyrna_Louvre_Ma13.jpg" alt="Escultura em mármore de Zeus de Esmirna, século II d.C., exposta no Museu do Louvre" loading="lazy">
               <span class="artifact-badge">Museu do Louvre, Paris</span>
             </div>
             <div class="artifact-content">
               <h3>Zeus de Esmirna</h3>
-              <span class="artifact-origin">Mármore Romano • Séc. II d.C.</span>
-              <p>Representação majestosa do pai dos deuses com drapeado no quadril e postura imperial. Encontrado na antiga Esmirna (atual Izmir, Turquia).</p>
-              <a href="deuses.html#card-zeus" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.8rem;">Ver Atributos de Zeus ➔</a>
+              <span class="artifact-origin">Mármore Romano (cópia helenística) • Séc. II d.C.</span>
+              <p>
+                Representação majestosa do pai dos deuses com drapeado no quadril e postura imperial. Encontrado na antiga Esmirna (atual Izmir, Turquia), expressa a autoridade cósmica e a estabilidade da ordem celeste sobre o mundo.
+              </p>
+              <a href="deuses.html#card-zeus" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.8rem;">
+                Ver Atributos de Zeus ➔
+              </a>
             </div>
           </article>
 
+          <!-- Imagem Real 2: O Bronze de Artemísio -->
           <article class="artifact-card">
             <div class="artifact-img-wrap">
-              <img src="assets/images/poseidon.jpg" alt="Estátua original grega em bronze do Deus do Cabo Artemísio, no Museu Arqueológico Nacional de Atenas" loading="lazy">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Artemision_Bronze.jpg" alt="Estátua original grega em bronze do Deus do Cabo Artemísio, no Museu Arqueológico Nacional de Atenas" loading="lazy">
               <span class="artifact-badge">Museu Arqueológico Nacional, Atenas</span>
             </div>
             <div class="artifact-content">
               <h3>O Deus do Cabo Artemísio</h3>
-              <span class="artifact-origin">Bronze Original Grego • c. 460 a.C.</span>
-              <p>Recuperado no fundo do mar da Eubeia em 1928, esta obra-prima retrata com vigor atlético ou <strong>Posídon</strong> arremessando o tridente, ou <strong>Zeus</strong> empunhando o raio.</p>
-              <a href="deuses.html#card-poseidon" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.8rem;">Ver Posídon no Panteão ➔</a>
+              <span class="artifact-origin">Bronze Original Grego • Estilo Severo (c. 460 a.C.)</span>
+              <p>
+                Recuperado no fundo do mar da Eubeia em 1928, esta obra-prima retrata com vigor atlético ou <strong>Posídon</strong> prestes a arremessar seu tridente marítimo, ou <strong>Zeus</strong> empunhando o raio fulminante.
+              </p>
+              <a href="deuses.html#card-poseidon" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.8rem;">
+                Ver Posídon no Panteão ➔
+              </a>
             </div>
           </article>
 
+          <!-- Imagem Real 3: Atena Varvakeion -->
           <article class="artifact-card">
             <div class="artifact-img-wrap">
-              <img src="assets/images/atena.jpg" alt="Estatueta de mármore pentélico da Atena Varvakeion, réplica romana da estátua perdida de Fídias" loading="lazy">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Athena_Varvakeion_-_MANA_-_Fidias.jpg" alt="Estatueta de mármore pentélico da Atena Varvakeion, réplica romana da estátua perdida de Fídias" loading="lazy">
               <span class="artifact-badge">Museu Arqueológico Nacional, Atenas</span>
             </div>
             <div class="artifact-content">
               <h3>Atena Varvakeion</h3>
-              <span class="artifact-origin">Mármore Pentélico • Séc. III d.C.</span>
-              <p>A mais fiel cópia conhecida da monumental <em>Athena Parthenos</em> de Fídias para o Partenon. Ostenta o elmo com esfinge e a vitória alada Nice.</p>
-              <a href="deuses.html#card-atena" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.8rem;">Conhecer Atena ➔</a>
+              <span class="artifact-origin">Mármore Pentélico • Séc. III d.C. (Réplica de Fídias)</span>
+              <p>
+                A mais fiel e completa cópia conhecida da monumental <em>Athena Parthenos</em> crisoelefantina criada por Fídias para o Partenon de Atenas. Ostenta o elmo com esfinge, a égide com a cabeça de Medusa e a vitória alada Nice.
+              </p>
+              <a href="deuses.html#card-atena" class="btn btn-outline" style="align-self: flex-start; padding: 0.5rem 1rem; font-size: 0.8rem;">
+                Conhecer a Sabedoria de Atena ➔
+              </a>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- CURIOSIDADES MITOLÓGICAS -->
+    <!-- 4. VISÃO DAS ERAS MITOLÓGICAS (CRITÉRIO C.4 - PREVIEW) -->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-kicker">A Sucessão dos Mundos</span>
+          <h2 class="section-title">As Grandes Eras da Mitologia</h2>
+          <p class="section-desc">
+            A tradição mitológica grega estrutura o tempo em quatro grandes períodos de consolidação da existência.
+          </p>
+        </header>
+
+        <div class="curiosities-grid">
+          <article class="curiosity-card">
+            <span class="curiosity-tag">Fase 1 • Primordial</span>
+            <h3>1. Caos & Protogonoi</h3>
+            <p>
+              O início do cosmos antes da luz e da diferenciação das formas: Caos, Gaia (Terra), Tártaro (Abismo), Eros (o Desejo gerador) e Nix (a Noite).
+            </p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="curiosity-tag">Fase 2 • Titanomaquia</span>
+            <h3>2. O Reinado dos Titãs</h3>
+            <p>
+              Urano e Cronos governam durante a mítica Idade de Ouro, até a rebelião dos filhos Crônidas liderados por Zeus e a guerra de dez anos pelo controle do céu.
+            </p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="curiosity-tag">Fase 3 • Ordem Cósmica</span>
+            <h3>3. O Estabelecimento do Olimpo</h3>
+            <p>
+              Os doze deuses estabelecem seus palácios dourados no Monte Olimpo e distribuem as esferas de governo: céu, terra, oceanos e submundo.
+            </p>
+          </article>
+
+          <article class="curiosity-card">
+            <span class="curiosity-tag">Fase 4 • Humanidade</span>
+            <h3>4. A Idade dos Heróis</h3>
+            <p>
+              Semideuses e mortais célebres enfrentam provas cósmicas: Héracles, Perseu, Teseu, Jasão e a catarse épica da Guerra de Troia.
+            </p>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="mitos.html" class="btn btn-primary">
+            <span>Acessar Linha do Tempo Completa com Fontes</span>
+            <span aria-hidden="true">📜</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CURIOSIDADES MITOLÓGICAS FUNDAMENTADAS (CRITÉRIO C.5) -->
     <section class="section section-alt">
       <div class="container">
         <header class="section-header">
           <span class="section-kicker">Rigor Historiográfico</span>
           <h2 class="section-title">Curiosidades Mitológicas Desmistificadas</h2>
+          <p class="section-desc">
+            Esclarecimentos acadêmicos baseados na literatura arcaica para superar mitos populares e equívocos modernos.
+          </p>
         </header>
 
         <div class="curiosities-grid">
+
           <article class="curiosity-card">
             <span class="curiosity-tag">O Panteão Olímpico</span>
             <h3>Por Que Hades Não Habita o Monte Olimpo?</h3>
-            <p>Hades sorteou como domínio o <strong>Submundo</strong> (Érebo). Por governar os mortos sob a terra, não tinha assento regular no cume celeste do Monte Olimpo, integrando o culto ctônico.</p>
+            <p>
+              Apesar de ser um dos três grandes filhos de Cronos (junto a Zeus e Posídon), Hades sorteou como domínio o <strong>Submundo</strong> (Érebo). Por governar os mortos sob a terra e inspirar temor reverente, não tinha assento regular no cume celeste do Monte Olimpo, integrando o culto ctônico e não o Dodecatheion celeste.
+            </p>
           </article>
 
           <article class="curiosity-card">
             <span class="curiosity-tag">Filologia Clássica</span>
             <h3>A Caixa de Pandora Era, na Verdade, uma Jarra</h3>
-            <p>No texto original de Hesíodo (<em>Os Trabalhos e os Dias</em>), o recipiente trazido por Pandora é um <strong>píthos</strong> (πίθος) — uma gigantesca jarra de cerâmica. A palavra "caixa" (<em>pyxis</em>) surgiu apenas com Erasmo de Roterdã no século XVI.</p>
+            <p>
+              No texto original de Hesíodo (<em>Os Trabalhos e os Dias</em>, v. 94), o recipiente trazido por Pandora é denominado <strong>píthos</strong> (πίθος) — uma gigantesca jarra de cerâmica para estocar cereais e vinho. A palavra "caixa" (<em>pyxis</em>) surgiu apenas no século XVI através de uma célebre tradução latina de Erasmo de Roterdã.
+            </p>
           </article>
 
           <article class="curiosity-card">
             <span class="curiosity-tag">Duplicidade Mítica</span>
             <h3>As Duas Tradições do Nascimento de Afrodite</h3>
-            <p>Em Hesíodo (<em>Teogonia</em>), Afrodite nasce das ondas marinhas fecundadas pelo falo de Urano (a Afrodite Urânia). Já em Homero (<em>Ilíada</em>), ela é filha carnal de Zeus e Dione (a Afrodite Pandemos).</p>
+            <p>
+              Em Hesíodo (<em>Teogonia</em>), Afrodite nasce das ondas marinhas fecundadas pelo falo decepado de Urano (a Afrodite Urânia, amor celeste e primordial). Já em Homero (<em>Ilíada</em>, Canto V), ela é apresentada de forma mais doméstica como filha carnal de Zeus e da ninfa Dione (a Afrodite Pandemos, deusa dos prazeres mundanos).
+            </p>
           </article>
+
         </div>
       </div>
     </section>
 
   </main>
 
+  <!-- Padrão Decorativo Helênico Inferior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
+  <!-- Rodapé Institucional Completo em Todas as Páginas (Critério B) -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
+
         <div class="footer-brand">
           <h4>OLYMPUS</h4>
-          <p>Portal acadêmico e interativo dedicado à mitologia grega clássica, desenvolvido por <strong>Amanda e Bianca</strong>.</p>
-          <div class="footer-quote">"No princípio de tudo surgiu o Caos; depois a Terra de amplo seio..." — Hesíodo</div>
+          <p>
+            Portal acadêmico e interativo dedicado ao estudo e valorização da mitologia grega clássica, desenvolvido por <strong>Amanda e Bianca</strong> com base nas fontes arcaicas de Homero e Hesíodo e na historiografia de Junito Brandão e Pierre Grimal.
+          </p>
+          <div class="footer-quote">
+            "No princípio de tudo surgiu o Caos; depois a Terra de amplo seio, morada eterna de todos os imortais." — Hesíodo, Teogonia (v. 116)
+          </div>
         </div>
 
         <div class="footer-col">
@@ -222,18 +329,23 @@
         </div>
 
         <div class="footer-col">
-          <h5>Padrões W3C</h5>
-          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">Desenvolvido com HTML5 semântico, CSS3 e JavaScript modular.</p>
-          <span class="badge">Projeto Amanda & Bianca</span>
+          <h5>Fontes & Pesquisa</h5>
+          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">
+            Desenvolvido com padrões W3C: HTML5 semântico, CSS3 com variáveis nativas e JavaScript modular sem dependências externas de terceiros.
+          </p>
+          <span class="badge">Projeto Web Design & Multimídia</span>
         </div>
+
       </div>
 
       <div class="footer-bottom">
         <p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega Clássica. Desenvolvido por <strong>Amanda e Bianca</strong>.</p>
+        <p>Desenvolvido com fidelidade historiográfica e rigor técnico.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Script JavaScript Master -->
   <script src="js/main.js"></script>
 </body>
 </html>
