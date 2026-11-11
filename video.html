@@ -1,17 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vídeo oficial do projeto OLYMPUS sobre mitologia grega, desenvolvido por Amanda e Bianca. Reprodução em HTML5 nativo com alta fidelidade visual.">
-  <meta name="keywords" content="Vídeo Mitologia Grega, OLYMPUS, Amanda e Bianca, HTML5 Video, Deuses Gregos, Web Design">
-  <title>OLYMPUS — Vídeo do Projeto | Por Amanda e Bianca</title>
-  
+  <meta name="description" content="Vídeo do projeto OLYMPUS sobre mitologia grega.">
+  <meta name="keywords" content="Vídeo Mitologia Grega, OLYMPUS, Deuses Gregos, Web Design">
+  <title>OLYMPUS — Vídeo do Projeto</title>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23070a12' stroke='%23d4af37' stroke-width='6'/><polygon points='50,15 62,42 92,42 68,60 77,88 50,71 23,88 32,60 8,42 38,42' fill='%23d4af37'/></svg>">
-  
+
   <style>
-    /* Estilos inline de segurança para garantir exibição impecável */
     .video-container-box {
       max-width: 960px;
       margin: 0 auto 2.5rem;
@@ -21,6 +21,7 @@
       overflow: hidden;
       box-shadow: 0 12px 40px rgba(0,0,0,0.8), 0 0 25px rgba(212,175,55,0.25);
     }
+
     .video-player-wrap {
       background: #000;
       position: relative;
@@ -29,12 +30,14 @@
       align-items: center;
       justify-content: center;
     }
+
     .main-video {
       width: 100%;
       max-height: 540px;
       display: block;
       background: #000;
     }
+
     .video-controls-panel {
       padding: 1rem 1.4rem;
       background: #0e1424;
@@ -45,6 +48,7 @@
       align-items: center;
       gap: 1rem;
     }
+
     .btn-action-tool {
       background: rgba(212,175,55,0.12);
       border: 1px solid #d4af37;
@@ -60,11 +64,13 @@
       gap: 0.4rem;
       transition: all 0.2s ease;
     }
+
     .btn-action-tool:hover {
       background: #d4af37;
       color: #070a12;
       box-shadow: 0 0 15px rgba(212,175,55,0.4);
     }
+
     .video-fallback-box {
       display: none;
       background: rgba(212,175,55,0.08);
@@ -74,16 +80,26 @@
       margin: 1rem 1.4rem;
       text-align: center;
     }
+
+    @media (max-width: 600px) {
+      .video-player-wrap {
+        min-height: 200px;
+      }
+
+      .video-controls-panel {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- Borda Grega Decorativa Superior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
-  <!-- CABEÇALHO E NAVEGAÇÃO -->
   <header class="site-header">
     <div class="container nav-container">
+
       <a href="index.html" class="brand-logo" aria-label="OLYMPUS Mitologia Grega - Página Inicial">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.7L4.5 7.5 12 4l7.5 3.5L12 10.7zM2 17l10 5 10-5v-2l-10 5-10-5v2zm0-4l10 5 10-5v-2l-10 5-10-5v2z"/>
@@ -98,151 +114,143 @@
           <li><a href="mitos.html" class="nav-link">Mitos & Tempo</a></li>
           <li><a href="video.html" class="nav-link active">Vídeo</a></li>
         </ul>
-        
+
         <button class="nav-toggle" aria-label="Abrir ou fechar menu de navegação" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </nav>
+
     </div>
   </header>
 
   <main id="main-content">
-    
-    <!-- SEÇÃO EXCLUSIVA DO VÍDEO -->
+
     <section class="section video-hero-section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
       <div class="container">
-        
+
         <header class="section-header">
-          <span class="section-kicker">Produção Multimídia • Feito por Amanda e Bianca</span>
-          <h1 class="section-title">Apresentação Oficial do Projeto</h1>
+          <span class="section-kicker">Produção Multimídia</span>
+
+          <h1 class="section-title">Apresentação do Projeto</h1>
+
           <p class="section-desc">
-            Espaço cinematográfico dedicado exclusivamente à exibição do vídeo sobre mitologia grega, 
-            produzido, apresentado e editado por <strong>Amanda e Bianca</strong> com reprodutor nativo HTML5.
+            Conheça um pouco mais sobre a mitologia grega por meio
+            desta apresentação audiovisual do projeto OLYMPUS.
           </p>
         </header>
 
-        <!-- CONTAINER CINEMA COM PLAYER MULTI-ORIGEM -->
         <div class="video-container-box">
-          
+
           <div class="video-player-wrap">
-            <video 
-              id="projectVideo" 
-              class="main-video" 
-              controls 
-              preload="auto" 
+            <video
+              id="projectVideo"
+              class="main-video"
+              controls
+              preload="metadata"
               playsinline
-              src="assets/video/apresentacao-grupo.mp4">
-              <!-- Múltiplas fontes de redundância automática -->
-              <source src="assets/video/apresentacao-grupo.mp4" type="video/mp4">
-              <source src="apresentacao-grupo.mp4" type="video/mp4">
-              <source src="assets/video/WhatsApp_Video_2026-11-10_at_20.35.36_(1).mp4" type="video/mp4">
-              <source src="WhatsApp_Video_2026-11-10_at_20.35.36_(1).mp4" type="video/mp4">
-              <source src="assets/video/apresentacao-exemplo.mp4" type="video/mp4">
-              Seu navegador não suporta a tag de vídeo HTML5.
+            >
+              <source src="WhatsApp%20Video%202026-11-10%20at%2020.35.36%20(1).mp4" type="video/mp4">
+              Seu navegador não suporta a reprodução de vídeos HTML5.
             </video>
           </div>
 
-          <!-- AVISO DE CARREGAMENTO MANUAL (CASO O ARQUIVO NÃO ESTEJA NA PASTA ASSETS) -->
           <div id="videoFallbackNotice" class="video-fallback-box">
             <p style="color: #f3e5ab; font-size: 0.95rem; margin-bottom: 0.8rem; font-weight: 500;">
-              ℹ️ O vídeo não foi detectado automaticamente pelo caminho relativo padrão.
+              Não foi possível carregar o vídeo automaticamente.
+              Você pode selecioná-lo no seu computador.
             </p>
+
             <label for="directVideoPicker" class="btn-action-tool" style="cursor: pointer; font-size: 0.95rem; padding: 0.6rem 1.4rem;">
-              📁 Clique aqui para selecionar seu vídeo no computador
+              📁 Selecionar vídeo
             </label>
-            <p style="color: #a8b2d1; font-size: 0.78rem; margin-top: 0.6rem;">
-              (Dica: Para o vídeo abrir sempre sozinho em qualquer PC, mantenha a pasta <code>assets/video/apresentacao-grupo.mp4</code> junto com o arquivo <code>video.html</code>).
-            </p>
           </div>
 
-          <!-- BARRA DE FERRAMENTAS DO VÍDEO -->
           <div class="video-controls-panel">
+
             <div style="display: flex; align-items: center; gap: 0.6rem;">
               <span id="videoStatusDot" style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 10px #22c55e; display: inline-block;"></span>
+
               <span id="videoStatusLabel" style="font-size: 0.88rem; color: #f3e5ab;">
-                Vídeo das Autoras: <strong>apresentacao-grupo.mp4</strong> (17,4 MB • HD)
+                Vídeo do Projeto OLYMPUS
               </span>
             </div>
 
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
-              <button type="button" id="btnCustomFullscreen" class="btn-action-tool" title="Tela cheia (Atalho: Tecla F)">
+
+              <button type="button" id="btnCustomFullscreen" class="btn-action-tool" title="Tela cheia">
                 ⛶ Tela Cheia
               </button>
-              
-              <a href="assets/video/apresentacao-grupo.mp4" target="_blank" class="btn-action-tool" title="Abrir em nova aba do navegador">
+
+              <a
+                href="WhatsApp%20Video%202026-11-10%20at%2020.35.36%20(1).mp4"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-action-tool"
+                title="Abrir vídeo em nova aba"
+              >
                 ▶ Abrir Vídeo
               </a>
 
-              <label for="directVideoPicker" class="btn-action-tool" title="Escolher arquivo de vídeo do seu computador" style="cursor: pointer;">
-                📁 Escolher Vídeo do PC
+              <label for="directVideoPicker" class="btn-action-tool" title="Escolher vídeo do computador" style="cursor: pointer;">
+                📁 Escolher Vídeo
               </label>
+
               <input type="file" id="directVideoPicker" accept="video/mp4,video/*" style="display: none;">
+
             </div>
           </div>
 
         </div>
 
-        <!-- IDENTIFICAÇÃO DAS AUTORAS -->
-        <header id="autoras-heading" class="section-header" style="margin-top: 2rem;">
-          <span class="section-kicker">Ficha Técnica e Créditos</span>
-          <h2 class="section-title">Integrantes do Projeto</h2>
-          <p class="section-desc">Responsáveis pela concepção pedagógica, desenvolvimento frontend e edição audiovisual.</p>
-        </header>
-
-        <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-          
-          <article class="team-card" style="background: var(--bg-card, #0e1424); border: 1px solid var(--border-gold, rgba(212,175,55,0.3)); border-radius: 12px; padding: 2.2rem; text-align: center;">
-            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #8a6d21, #d4af37); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: bold; color: #070a12; margin: 0 auto 1.2rem; box-shadow: 0 0 20px rgba(212,175,55,0.4); font-family: serif;">
-              A
-            </div>
-            <h3 style="font-size: 1.4rem; color: #f8fafc; margin-bottom: 0.3rem;">Amanda</h3>
-            <span class="badge" style="margin-bottom: 1.2rem; display: inline-block;">Web Design & Arquitetura Frontend</span>
-            <p style="font-size: 0.92rem; color: #a8b2d1; line-height: 1.6;">
-              Estruturação semântica em HTML5, estilização visual com identidade clássica em CSS3, 
-              tabela dos 12 deuses olímpicos, responsividade para dispositivos móveis e conformidade com critérios de avaliação W3C.
-            </p>
-          </article>
-
-          <article class="team-card" style="background: var(--bg-card, #0e1424); border: 1px solid var(--border-gold, rgba(212,175,55,0.3)); border-radius: 12px; padding: 2.2rem; text-align: center;">
-            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #8a6d21, #d4af37); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: bold; color: #070a12; margin: 0 auto 1.2rem; box-shadow: 0 0 20px rgba(212,175,55,0.4); font-family: serif;">
-              B
-            </div>
-            <h3 style="font-size: 1.4rem; color: #f8fafc; margin-bottom: 0.3rem;">Bianca</h3>
-            <span class="badge" style="margin-bottom: 1.2rem; display: inline-block;">Produção Audiovisual & Pesquisa</span>
-            <p style="font-size: 0.92rem; color: #a8b2d1; line-height: 1.6;">
-              Pesquisa historiográfica e mitológica, redação do roteiro temático, captação e edição do vídeo 
-              do grupo, compressão multimídia e integração das referências acadêmicas.
-            </p>
-          </article>
-
-        </div>
-
-        <!-- REFERÊNCIAS BIBLIOGRÁFICAS E CRITÉRIOS ACADÊMICOS -->
         <header id="criterios" class="section-header">
           <span class="section-kicker">Rigor Historiográfico & ABNT</span>
+
           <h2 class="section-title">Fontes de Pesquisa e Referências</h2>
-          <p class="section-desc">Fundamentação teórica clássica e contemporânea utilizada na construção de todo o conteúdo.</p>
+
+          <p class="section-desc">
+            Fundamentação teórica clássica e contemporânea utilizada
+            na construção do conteúdo do projeto.
+          </p>
         </header>
 
         <div style="background: var(--bg-card, #0e1424); border: 1px solid var(--border-gold, rgba(212,175,55,0.3)); border-radius: 12px; padding: 2.2rem; margin-bottom: 3rem;">
+
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+
             <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">HESÍODO.</strong> <em>Teogonia: A Origem dos Deuses</em>. Tradução, introdução e notas de Jaa Torrano. 7. ed. São Paulo: Iluminura, 2013.
+              <strong style="color: #f3e5ab;">HESÍODO.</strong>
+              <em>Teogonia: A Origem dos Deuses</em>.
+              Tradução, introdução e notas de Jaa Torrano.
+              7. ed. São Paulo: Iluminura, 2013.
             </li>
+
             <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">HOMERO.</strong> <em>Ilíada</em> &amp; <em>Odisseia</em>. Tradução em versos por Carlos Alberto Nunes. Rio de Janeiro: Ediouro / Nova Fronteira, 2015.
+              <strong style="color: #f3e5ab;">HOMERO.</strong>
+              <em>Ilíada</em> &amp; <em>Odisseia</em>.
+              Tradução em versos por Carlos Alberto Nunes.
+              Rio de Janeiro: Ediouro / Nova Fronteira, 2015.
             </li>
+
             <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">VERNANT, Jean-Pierre.</strong> <em>Mito e Pensamento entre os Gregos</em>. Rio de Janeiro: Paz e Terra, 2008.
+              <strong style="color: #f3e5ab;">VERNANT, Jean-Pierre.</strong>
+              <em>Mito e Pensamento entre os Gregos</em>.
+              Rio de Janeiro: Paz e Terra, 2008.
             </li>
+
             <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">GRIMAL, Pierre.</strong> <em>Dicionário da Mitologia Grega e Romana</em>. 5. ed. Rio de Janeiro: Bertrand Brasil, 2005.
+              <strong style="color: #f3e5ab;">GRIMAL, Pierre.</strong>
+              <em>Dicionário da Mitologia Grega e Romana</em>.
+              5. ed. Rio de Janeiro: Bertrand Brasil, 2005.
             </li>
+
             <li style="border-left: 3px solid #d4af37; padding-left: 1.2rem;">
-              <strong style="color: #f3e5ab;">BRANDÃO, Junito de Souza.</strong> <em>Mitologia Grega</em>. Volumes I, II e III. Petrópolis: Vozes, 2012.
+              <strong style="color: #f3e5ab;">BRANDÃO, Junito de Souza.</strong>
+              <em>Mitologia Grega</em>.
+              Volumes I, II e III. Petrópolis: Vozes, 2012.
             </li>
+
           </ul>
         </div>
 
@@ -251,17 +259,24 @@
 
   </main>
 
-  <!-- Borda Grega Decorativa Inferior -->
   <div class="greek-border-pattern" aria-hidden="true"></div>
 
-  <!-- RODAPÉ INTEGRADO -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
+
         <div class="footer-brand">
           <h4>OLYMPUS</h4>
-          <p>Portal acadêmico e interativo dedicado à mitologia grega clássica, desenvolvido por <strong>Amanda e Bianca</strong>.</p>
-          <div class="footer-quote">"No princípio de tudo surgiu o Caos; depois a Terra de amplo seio..." — Hesíodo</div>
+          <p>
+            Portal acadêmico e interativo dedicado ao estudo
+            e à valorização da mitologia grega clássica.
+          </p>
+
+          <div class="footer-quote">
+            "No princípio de tudo surgiu o Caos; depois a Terra
+            de amplo seio, morada eterna de todos os imortais."
+            — Hesíodo, Teogonia (v. 116)
+          </div>
         </div>
 
         <div class="footer-col">
@@ -275,30 +290,25 @@
         </div>
 
         <div class="footer-col">
-          <h5>Autoras & Projeto</h5>
-          <ul class="footer-links">
-            <li><a href="video.html#autoras-heading">Amanda — Web Design</a></li>
-            <li><a href="video.html#autoras-heading">Bianca — Audiovisual</a></li>
-            <li><a href="video.html#criterios">Referências Bibliográficas</a></li>
-          </ul>
+          <h5>Fontes & Pesquisa</h5>
+          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">
+            Conteúdo baseado em fontes históricas e referências
+            bibliográficas sobre a mitologia grega.
+          </p>
+          <span class="badge">Projeto Web Design & Multimídia</span>
         </div>
 
-        <div class="footer-col">
-          <h5>Padrões W3C</h5>
-          <p style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem;">Desenvolvido com HTML5 semântico, CSS3 e JavaScript modular.</p>
-          <span class="badge">Projeto Amanda & Bianca</span>
-        </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega Clássica. Desenvolvido por <strong>Amanda e Bianca</strong>.</p>
+        <p>&copy; 2026 Projeto OLYMPUS — Mitologia Grega Clássica.</p>
+        <p>Desenvolvido com fidelidade historiográfica e rigor técnico.</p>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
 
-  <!-- SCRIPT INTEGRADO DE SEGURANÇA PARA O VÍDEO -->
   <script>
     (function() {
       const vid = document.getElementById('projectVideo');
@@ -310,42 +320,54 @@
 
       if (!vid) return;
 
-      // Se der erro ao carregar o vídeo relativo padrão, mostra o seletor com calma
       vid.addEventListener('error', function() {
-        if (fallbackNotice) fallbackNotice.style.display = 'block';
+        if (fallbackNotice) {
+          fallbackNotice.style.display = 'block';
+        }
+
         if (statusDot) {
           statusDot.style.background = '#eab308';
           statusDot.style.boxShadow = '0 0 10px #eab308';
         }
+
         if (statusLabel) {
-          statusLabel.innerHTML = 'Aguardando seleção do arquivo de vídeo local';
+          statusLabel.textContent = 'Não foi possível carregar o vídeo.';
         }
       });
 
-      // Quando o vídeo carrega com sucesso
       vid.addEventListener('loadeddata', function() {
-        if (fallbackNotice) fallbackNotice.style.display = 'none';
+        if (fallbackNotice) {
+          fallbackNotice.style.display = 'none';
+        }
+
         if (statusDot) {
           statusDot.style.background = '#22c55e';
           statusDot.style.boxShadow = '0 0 10px #22c55e';
         }
+
         if (statusLabel) {
-          statusLabel.innerHTML = 'Vídeo Pronto: <strong>apresentacao-grupo.mp4</strong> (Amanda & Bianca)';
+          statusLabel.textContent = 'Vídeo carregado com sucesso!';
         }
       });
 
-      // Seletor manual caso o usuário queira abrir qualquer arquivo diretamente
       if (picker) {
         picker.addEventListener('change', function(e) {
           const file = e.target.files[0];
+
           if (file) {
             vid.src = URL.createObjectURL(file);
             vid.load();
+
             vid.play().catch(function() {});
-            if (fallbackNotice) fallbackNotice.style.display = 'none';
-            if (statusLabel) {
-              statusLabel.innerHTML = 'Vídeo Carregado: <strong>' + file.name + '</strong>';
+
+            if (fallbackNotice) {
+              fallbackNotice.style.display = 'none';
             }
+
+            if (statusLabel) {
+              statusLabel.textContent = 'Vídeo selecionado: ' + file.name;
+            }
+
             if (statusDot) {
               statusDot.style.background = '#22c55e';
               statusDot.style.boxShadow = '0 0 10px #22c55e';
@@ -354,17 +376,22 @@
         });
       }
 
-      // Tela cheia
       if (btnFs) {
         btnFs.addEventListener('click', function() {
           if (!document.fullscreenElement) {
-            if (vid.requestFullscreen) vid.requestFullscreen();
+            if (vid.requestFullscreen) {
+              vid.requestFullscreen();
+            }
           } else {
-            if (document.exitFullscreen) document.exitFullscreen();
+            if (document.exitFullscreen) {
+              document.exitFullscreen();
+            }
           }
         });
       }
+
     })();
   </script>
+
 </body>
 </html>
